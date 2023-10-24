@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          https://github.com/ZulaicaE/proyectoFullStack.git          
+          https://github.com/ZulaicaE/proyectoFullS          
         </p>
         <div>
           <a
