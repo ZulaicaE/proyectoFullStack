@@ -1,0 +1,117 @@
+div.cont {
+    background-image: url("https://empakes.com.mx/wp-content/uploads/2016/10/fondo-footer-768x240.jpg");
+    width: 100%;
+    height: 200px;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+.cont h1 {
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.enlacesCont {
+    color: red;
+    height: 80%;
+    min-width: 20%;
+    margin-left: 5%;
+}
+
+.enlaces {
+    font-size: 13px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+.enlaces li {
+    color: white;
+}
+
+.enlaces li:hover {
+    transform: scale(1.2, 1.2)translateY(-3%);
+}
+
+.cont a {
+    color: #29B9D3;
+    font-weight: bolder;
+   
+}
+
+.cont a:hover {
+    color: green;
+}
+
+
+.cont a:link {
+    text-decoration: none;
+}
+
+.cont ul {
+    list-style: none;
+    padding: 0px 10px;
+}
+
+.telUtiles {
+    display: block;
+    flex-direction: row;
+    height: 80%;
+    min-width: 30%;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.telUtiles dl {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    padding: 0px 10px;
+    font-size: 13px;
+    color: #A4AAAB;
+}
+
+.telUtiles dd {
+    float: left;
+    width: 50%;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+.telUtiles dt {
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+    height: 80%;
+    min-width: 20%;
+    margin-right: 5%;
+    padding: 10px 10px 10px 10px;
+}
+
+.github a img:hover {
+    transform: translateY(-3%);
+}
+
+.telUtiles li:hover {
+    transform: scale(1.2, 1.2)translateY(-3%);
+}
+
+.telUtiles ul {
+    font-size: 13px;
+    text-align: left;
+    align-items: left;
+    padding: 0px 10px;
+}
