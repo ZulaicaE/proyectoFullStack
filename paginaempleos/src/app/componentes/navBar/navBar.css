@@ -13,7 +13,7 @@
   border-radius: 12px;
 }
 
-.navBar li a{
+.navBar li a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +21,21 @@
   text-decoration: none;
   color: #000;
   padding: 5px 20px;
+
+  width: 126px;
+  height: 74px;
+}
+
+.navBar li a:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  text-decoration: none;
+  color: #000;
+  padding: 5px 20px;
+
+  font-weight: bolder;
 }
 
 .navBar li a:active {
