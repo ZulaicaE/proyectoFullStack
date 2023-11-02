@@ -1,8 +1,8 @@
 import styles from './page.module.css';
-import { Banner } from "./componentes/banner/banner";
-import { NavBar } from "./componentes/navBar/navBar";
-import { InfoHome } from './componentes/InfoHome/infoHome';
-import { HomeMenu } from "./componentes/HomeMenu/homeMenu";
+import { Banner } from "./componentes/bannerHome/Banner";
+import { NavBar } from "./componentes/navBar/NavBar";
+import { InfoHome } from './componentes/infoHome/InfoHome';
+import { HomeMenu } from "./componentes/homeMenu/HomeMenu";
 
 export default function Home() {
   return (
