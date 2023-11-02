@@ -1,4 +1,4 @@
-import { NavBar } from "../componentes/navBar/navBar";
+import { NavBar } from "../componentes/navBar/NavBar";
 
 export default function CandidatosPage () {
   return (

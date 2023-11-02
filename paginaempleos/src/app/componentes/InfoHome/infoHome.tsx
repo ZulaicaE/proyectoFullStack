@@ -1,5 +1,5 @@
 import styles from './infoHome.module.css';
-import { CardNoticia } from '../CardNoticia/cardNoticia';
+import { CardNoticia } from '../cardNoticia/CardNoticia';
 
 export const InfoHome = () => {
     return (
