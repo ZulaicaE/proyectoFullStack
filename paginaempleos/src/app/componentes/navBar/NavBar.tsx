@@ -17,8 +17,7 @@ const links = [{
 
 export const NavBar = () => {
   return (
-    <header>
-      <nav>
+      <nav className="sticky-top">
         <ul className="d-flex flex-row navBar">
           {links.map(({ label, route, image }) => (
             <li key={route}>
@@ -30,7 +29,5 @@ export const NavBar = () => {
           ))}
         </ul>
       </nav>
-    </header>
-
   );
 }
