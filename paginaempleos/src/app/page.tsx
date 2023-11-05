@@ -1,8 +1,10 @@
+'use client'
 import styles from './page.module.css';
 import { Banner } from "./componentes/bannerHome/Banner";
 import { NavBar } from "./componentes/navBar/NavBar";
 import { InfoHome } from './componentes/infoHome/InfoHome';
 import { HomeMenu } from "./componentes/homeMenu/HomeMenu";
+import { ImageCarousel } from "./componentes/carousel/Carousel";
 
 export default function Home() {
   return (
@@ -21,7 +23,9 @@ export default function Home() {
             <InfoHome />
           </div>
         </div>
+          <ImageCarousel /> 
       </main>
+      
     </>
   )
 }
