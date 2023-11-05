@@ -1,26 +1,32 @@
-nav {
+.navBar {
   background-color: azure;
   z-index: 100;
-  padding: 5px;
   border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navBar {
+.navLogo {
+  width: 150px;
+}
+
+.navBarButton {
+  display: flex;
   gap: 25px;
   justify-content: center;
   list-style: none;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
 }
 
-.navBar li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+.navBarButton li {
   border: solid 2px;
   border-radius: 12px;
 }
 
-.navBar li a {
+.navBarButton li a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +39,7 @@ nav {
   height: 74px;
 }
 
-.navBar li a:hover {
+.navBarButton li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +51,7 @@ nav {
   font-weight: bolder;
 }
 
-.navBar li a:active {
+.navBarButton li a:active {
   border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }

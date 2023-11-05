@@ -20,8 +20,8 @@ export const CardNoticia = () => {
         <div className={styles.noticia}>
             <div className='row'>
                 {news.map(({ noticia, info, image }) => (
-                    <div className='col'>
-                        <div className="card" style={{ width: '18rem' }} key={noticia}>
+                    <div className='col' key={noticia}>
+                        <div className="card" style={{ width: '18rem' }}>
                             <img src={image} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <p className="card-text">{info}</p>
