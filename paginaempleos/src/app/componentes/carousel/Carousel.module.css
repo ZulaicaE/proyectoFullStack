@@ -1,13 +1,15 @@
 .imageCarousel {
   margin: 5px 10px;
+  overflow: inherit;
+  max-width: 300px;
 }
 
 .itemCarousel {
   height: 15rem;
-  }
+}
 
-  .itemCarousel > img {
-    width: 100%;
-    object-fit: cover;
-    height: inherit;
-  }
+.itemCarousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
