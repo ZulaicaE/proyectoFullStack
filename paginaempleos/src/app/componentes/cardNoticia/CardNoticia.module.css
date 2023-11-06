@@ -1,4 +1,15 @@
-.noticia{
+.cardNoticia {
     margin: 10px;
     padding: 10px;
+}
+
+.card {
+    background-color: #e0ffcd;
+    width: 18rem;
+    border: 2px solid slategrey;
+    border-radius: 5px;
+}
+
+.cardBody {
+    padding: 5px;
 }
