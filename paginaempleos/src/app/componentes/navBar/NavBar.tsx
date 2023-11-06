@@ -4,15 +4,15 @@ import "./NavBar.css"
 const links = [{
   label: 'Home',
   route: '/',
-  image: './img/navBar/home.svg'
+  image: './img/navBar/home.png'
 }, {
   label: 'Empleos',
   route: '/empleos',
-  image: './img/navBar/factory.png'
+  image: './img/navBar/empleos.png'
 }, {
   label: 'Candidatos',
   route: '/candidatos',
-  image: './img/navBar/worker.png'
+  image: './img/navBar/trabajador.png'
 }]
 
 export const NavBar = () => {

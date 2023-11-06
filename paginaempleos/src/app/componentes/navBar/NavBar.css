@@ -1,7 +1,9 @@
 .navBar {
   background-color: azure;
   z-index: 100;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
+  padding-top: 2px;
+  padding-bottom: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,18 +14,16 @@
 }
 
 .navBarButton {
+  font-family: 'Ubuntu';
   display: flex;
+ 
   gap: 25px;
   justify-content: center;
   list-style: none;
   flex-grow: 1;
   margin: 0;
-  padding: 0;
-}
-
-.navBarButton li {
-  border: solid 2px;
-  border-radius: 12px;
+  padding-right: 150px;
+  padding-left: 0;
 }
 
 .navBarButton li a {
