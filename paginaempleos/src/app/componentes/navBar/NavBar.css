@@ -1,7 +1,7 @@
 .navBar {
-  background-color: azure;
+  background-color: #61d2b4;
   z-index: 100;
-  border-bottom: 1px solid grey;
+  border-bottom: 2px solid slategrey;
   padding-top: 2px;
   padding-bottom: 2px;
   display: flex;
@@ -11,6 +11,7 @@
 
 .navLogo {
   width: 150px;
+  margin-left: 5px;
 }
 
 .navBarButton {
