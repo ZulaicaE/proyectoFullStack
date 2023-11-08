@@ -1,7 +1,11 @@
 .imageCarousel {
-  margin: 5px 10px;
+  margin: 1% 0%;
+  margin-right: 1%;
+  padding: 1%;
+  border: 5px solid;
+  border-color:#61d2b4 ;
   overflow: inherit;
-  max-width: 300px;
+  width: 99%;
 }
 
 .itemCarousel {
