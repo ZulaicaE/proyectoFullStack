@@ -17,10 +17,10 @@ export default function Home() {
       <main className={styles.main}>
         <h1>¡Bienvenidos a Futurama, la asombrosa metrópolis del año 3000!</h1>
         <div className="d-flex flex-row">
-          <div className='col-2 d-flex flex-row justify-content-evenly'>
+          <div className='col-2 d-flex flex-row justify-content-between'>
             <HomeMenu />
           </div>
-          <div className='col-10 d-flex flex-row justify-content-evenly'>
+          <div className='col-10 d-flex flex-row justify-content-between'>
             <InfoHome />
           </div>
         </div>
