@@ -6,15 +6,15 @@ import styles from "../Carousel/Carousel.module.css";
 const slides = [{
   id: 1,
   desc: 'Lorem ipsum.',
-  image: './img/carousel/city1.jpg'
+  image: './img/carousel/city2.png'
 }, {
   id: 2,
   desc: 'Lorem ipsum.',
-  image: './img/carousel/city2.png'
+  image: './img/carousel/city4.webp'
 }, {
   id: 3,
   desc: 'Lorem ipsum.',
-  image: './img/carousel/city4.webp'
+  image: './img/carousel/city1.jpg'
 }]
 
 export const ImageCarousel = () => {

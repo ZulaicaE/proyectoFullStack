@@ -1,7 +1,6 @@
 div.cont {
     background-color: #0D7377; /* #0D7377 #2B3499 #363062 #00ADB5 #222831(gris oscuro) #40514E*/
     width: 100%;
-    height: 200px;
     display: flex;
     gap: 10%;
     align-items: center;
@@ -10,7 +9,7 @@ div.cont {
 
 .cont h1 {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .enlacesCont {
@@ -21,7 +20,7 @@ div.cont {
 }
 
 .enlaces {
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 10px 10px 10px;
 }
 
@@ -112,7 +111,7 @@ div.cont {
 }
 
 .telUtiles ul {
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
     align-items: left;
     padding: 0px 10px;
