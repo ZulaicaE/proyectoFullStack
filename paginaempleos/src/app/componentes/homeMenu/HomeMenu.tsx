@@ -3,25 +3,25 @@ import Link from "next/link"
 
 const links = [{
     label: 'Noticias',
-    route: '/noticias',
+    route: '#cardNoticia',
 }, {
     label: 'Salud',
-    route: '/empleos',
+    route: '',
 }, {
     label: 'Deportes',
-    route: '/deportes',
+    route: '',
 },
 {
     label: 'Servicios',
-    route: '/servicios',
+    route: '',
 },
 {
     label: 'Transporte',
-    route: '/transporte',
+    route: '',
 },
 {
     label: 'Turismo',
-    route: '/turismo',
+    route: '',
 }]
 
 export const HomeMenu = () => {
@@ -29,7 +29,7 @@ export const HomeMenu = () => {
         <div className={styles.menu}>
             <ul className={`${styles.navMenu} list-group list-group-flush`}>
                 {links.map(({ label, route }) => (
-                    <li className={`${styles.navMenu} list-group-item`} key={route}>
+                    <li className={`${styles.navMenu} list-group-item`} key={label}>
                         <Link href={route}>
                             {label}
                         </Link>
