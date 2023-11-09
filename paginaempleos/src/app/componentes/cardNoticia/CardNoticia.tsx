@@ -33,7 +33,7 @@ export const CardNoticia = () => {
         <div className={styles.cardNoticia}>
             <div className='row'>
                 {news.map(({ noticia, info, image }) => (
-                    <div className='col' key={noticia}>
+                    <div className='col d-flex justify-content-center cardNot' key={noticia}>
                         <div className={styles.card}>
                             <img src={image} className={styles.cardImg} alt="..." />
                             <div className={styles.cardBody}>
