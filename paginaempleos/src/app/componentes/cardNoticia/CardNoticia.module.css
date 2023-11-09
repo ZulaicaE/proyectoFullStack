@@ -5,11 +5,28 @@
 
 .card {
     background-color: #e0ffcd;
-    width: 18rem;
-    border: 2px solid slategrey;
-    border-radius: 5px;
+    width: 284px;
+    border-radius: 10px;
 }
 
 .cardBody {
     padding: 5px;
+    margin: 0px;
+}
+
+.cardImg {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 180px;
+    width: 284px;
+}
+
+.cardTitle {
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.cardText {
+    font-size: 19px;
+    margin-bottom: 0px;
 }
