@@ -1,52 +1,70 @@
-div.cont {
-    background-color: #0D7377; /* #0D7377 #2B3499 #363062 #00ADB5 #222831(gris oscuro) #40514E*/
-    width: 100%;
-    display: flex;
-    gap: 10%;
-    align-items: center;
+.footer {
+    background-color: #0D7377;
+    /* #0D7377 #2B3499 #363062 #00ADB5 #222831(gris oscuro) #40514E*/
+    ;
+    padding: 5px 0;
+}
+
+.contenedor {
+    max-width: 100%;
     font-family: "Ubuntu";
+    padding: 50px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+
 }
 
-.cont h1 {
-    color: white;
+.col h2 {
     font-size: 25px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
 }
 
-.enlacesCont {
-    color: red;
-    height: 80%;
-    min-width: 20%;
-    margin-left: 5%;
+.col h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
 }
 
-.enlaces {
+.col {
+    width: 30%;
+    padding: 0 15px;
+}
+
+.col li {
     font-size: 16px;
-    padding: 10px 10px 10px 10px;
-}
-
-
-.enlaces li {
+    padding: 0;
     color: white;
+    margin-bottom: 2px;
 }
 
-.cont a {
+.contenedor a {
     display: inline-block;
     color: #61d2b4;
-    font-weight: bolder;   
+    font-weight: bolder;
     transition: transform 0.3s ease
 }
 
-.cont li a:hover {
+.contenedor li a:hover {
     color: white;
     transform: scale(1.2, 1.2)translateY(-3%);
 }
 
 
-.cont a:link {
+.contenedor a:link {
     text-decoration: none;
 }
 
-.cont ul {
+.col ul {
     list-style: none;
     padding: 0px 10px;
 }
@@ -56,7 +74,6 @@ div.cont {
     flex-direction: row;
     height: 80%;
     min-width: 30%;
-    padding: 10px 10px 10px 10px;
 
 }
 
@@ -117,6 +134,21 @@ div.cont {
     padding: 0px 10px;
 }
 
-.telUtiles a {
-    display: inline-block;
+
+/*responsive*/
+@media(max-width: 1183px) {
+    .col {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+    .github{
+        width:100%;
+    }
+}
+
+@media(max-width: 992px) {
+    .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
