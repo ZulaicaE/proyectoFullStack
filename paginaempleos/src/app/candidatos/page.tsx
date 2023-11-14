@@ -4,7 +4,7 @@ import { TituloPrincipal } from "../componentes/tituloJobs/TituloPrincipal";
 import { Banner } from '../componentes/banner/Banner';
 
 export default function CandidatosPage () {
-  const src = "/img/banner/paidToThink2.jpg"
+  const src = "/img/banner/thnkBanner.png"
   const titulo = "¡Futurama te necesita! Busque su candidato aquí"
   
   return (
