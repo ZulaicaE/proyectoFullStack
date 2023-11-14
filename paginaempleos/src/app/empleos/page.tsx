@@ -1,5 +1,4 @@
 import styles from '../page.module.css';
-import { BannerJobs } from "../componentes/bannerJobs/BannerJobs";
 import { NavBar } from "../componentes/navBar/NavBar";
 import { TituloPrincipal } from "../componentes/tituloJobs/TituloPrincipal";
 import { Banner } from '../componentes/banner/Banner';
