@@ -1,6 +1,6 @@
 'use client'
 import styles from './page.module.css';
-import { Banner } from "./componentes/bannerHome/Banner";
+import { Banner } from "./componentes/banner/Banner";
 import { NavBar } from "./componentes/navBar/NavBar";
 import { InfoHome } from './componentes/infoHome/InfoHome';
 import { HomeMenu } from "./componentes/homeMenu/HomeMenu";
@@ -9,10 +9,11 @@ import { TituloPrincipal } from './componentes/tituloJobs/TituloPrincipal';
 
 export default function Home() {
   const titulo = "¡Bienvenidos a Futurama, la asombrosa metrópolis del año 3000!"
+  const src = "/img/banner/cityBanner.jpg"
 
   return (
     <>
-      <Banner />
+      <Banner src={src} />
       <NavBar />
 
       <main className={styles.main}>
