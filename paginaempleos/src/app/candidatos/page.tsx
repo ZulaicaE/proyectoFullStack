@@ -24,6 +24,5 @@ export default function CandidatosPage() {
         </div>
       </main>
     </>
-
   )
 }      

@@ -5,7 +5,7 @@ const dataCandidatos = [
     edad: "28",
     fulltime: "Si",
     movilidad: "Si",
-    img: "./img/candidatos/hermes.png"
+    img: "./img/candidatos/alien1.jpg"
     },
     {id: "2",
     nombre: "Amy",
@@ -13,7 +13,7 @@ const dataCandidatos = [
     edad: "22",
     fulltime: "No",
     movilidad: "No",
-    img: "./img/candidatos/amy.png"
+    img: "./img/candidatos/alien2.jpg"
     },
     {id: "3",
     nombre: "Martin",
@@ -21,7 +21,7 @@ const dataCandidatos = [
     edad: "32",
     fulltime: "Si",
     movilidad: "No",
-    img: "./img/candidados/capitan.png"
+    img: "./img/candidatos/alien3.jpg"
     },
     {id: "4",
     nombre: "Armando",
@@ -29,7 +29,7 @@ const dataCandidatos = [
     edad: "27",
     fulltime: "No",
     movilidad: "Si",
-    img: "./img/candidatos/conserje.png"
+    img: "./img/candidatos/foto1.jpg"
     },
     {id: "5",
     nombre: "John",
@@ -37,7 +37,7 @@ const dataCandidatos = [
     edad: "75",
     fulltime: "No",
     movilidad: "No",
-    img: "./img/candidatos/doc.png"
+    img: "./img/candidatos/foto2.jpg"
     }
 ];
 
