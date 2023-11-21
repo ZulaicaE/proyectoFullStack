@@ -7,4 +7,17 @@
   height: 300px;
   width: 300px;
   object-fit: cover;
+  margin-top: 10px;
+}
+
+.tituloCardEmployee {
+  font-size: larger;
+}
+
+.cardTextInfo {
+  font-size: 18px;
+}
+
+u {
+  font-size: 20px;
 }

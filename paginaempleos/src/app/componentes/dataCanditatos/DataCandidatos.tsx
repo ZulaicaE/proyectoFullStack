@@ -1,43 +1,58 @@
 const dataCandidatos = [
     {id: "1",
-    nombre: "Emiliano",
-    apellido: "Zulaica",
+    nombre: "Kif",
+    apellido: "Kroker",
     edad: "28",
+    linkCV: "linkedin.com/Kif",
+    skills: "Liderazgo, Teamwork, Adaptabilidad.",
     fulltime: "Si",
     movilidad: "Si",
-    img: "./img/candidatos/alien1.jpg"
+    img: "./img/candidatos/alien1.jpg",
+    puesto: "Cocinero"
     },
     {id: "2",
-    nombre: "Amy",
-    apellido: "Yang",
+    nombre: "Morbo",
+    apellido: "Vorian",
     edad: "22",
+    linkCV: "linkedin.com/Morbo",
+    skills: "Creatividad, Honesto, Responsable.",
     fulltime: "No",
     movilidad: "No",
-    img: "./img/candidatos/alien2.jpg"
+    img: "./img/candidatos/alien2.jpg",
+    puesto: "Periodista"
     },
     {id: "3",
-    nombre: "Martin",
-    apellido: "Rodriguez",
+    nombre: "Edna",
+    apellido: "Inara",
     edad: "32",
+    linkCV: "linkedin.com/Edna",
+    skills: "Liderazgo, Adaptabilidad, Empatia.",
     fulltime: "Si",
     movilidad: "No",
-    img: "./img/candidatos/alien3.jpg"
+    img: "./img/candidatos/alien3.jpg",
+    puesto: "Abogada"
     },
     {id: "4",
     nombre: "Armando",
     apellido: "Barreda",
     edad: "27",
+    linkCV: "linkedin.com/Armando",
+    skills: "Teamwork, Iniciativa, Etica Laboral.",
     fulltime: "No",
     movilidad: "Si",
-    img: "./img/candidatos/foto1.jpg"
+    img: "./img/candidatos/foto1.jpg",
+    puesto: "Mecanico"
     },
     {id: "5",
-    nombre: "John",
-    apellido: "Zoidberg",
+    nombre: "Javier",
+    apellido: "Alonso",
     edad: "75",
+    linkCV: "linkedin.com/Javier",
+    skills: "Integridad, Productividad, Conocimiento Tecnologico.",
     fulltime: "No",
     movilidad: "No",
-    img: "./img/candidatos/foto2.jpg"
+    img: "./img/candidatos/foto2.jpg",
+    puesto: "Programador"
     }
 ];
 
