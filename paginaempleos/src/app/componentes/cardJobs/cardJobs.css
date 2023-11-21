@@ -1,0 +1,33 @@
+.cardJobs {
+    background: #e0ffcd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0;
+}
+
+.jobsImg {
+    width: 496px;
+    height: 372px;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+u {
+    font-size: 20px;
+}
+
+span {
+    font-size: 18px;
+}
+
+.tituloCardJobs {
+    font-size: larger;
+}
+
+.botonCV {
+    padding-bottom: 10px;
+}
+
+.botonCV button {
+    background: #61d2b4;
+}
