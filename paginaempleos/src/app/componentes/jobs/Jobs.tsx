@@ -6,6 +6,7 @@ import { CardJobs } from "../cardJobs/CardJobs";
 interface Candidato {
     id: string;
     empleo: string;
+    empresa: string;
     rubro: string;
     descripcion: string;
     requisitos: string;
