@@ -8,16 +8,18 @@ interface Candidato {
     nombre: string;
     apellido: string;
     edad: string;
+    linkCV: string;
+    skills: string;
     fulltime: string;
     movilidad: string;
     img: string;
-  }
-  
-  interface CandidatosFiltradosProps {
+}
+
+interface CandidatosFiltradosProps {
     candidatosFiltrados: Candidato[];
-  }
-  
-export const Employees: React.FC<CandidatosFiltradosProps> = ({candidatosFiltrados}) => {
+}
+
+export const Employees: React.FC<CandidatosFiltradosProps> = ({ candidatosFiltrados }) => {
     return (
         <div className={styles.divCandidatos}>
             <Row xs={1} md={2} lg={2} xl={4} className="g-4">
