@@ -10,9 +10,9 @@ interface FiltroEmployeeProps {
 export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidatosFiltrados }) => {
   const [filtroNombre, setFiltroNombre] = useState<string>('');
   const [filtroEdad, setFiltroEdad] = useState<string>('');
-  const [fulltimeYes, setFulltimeYes] = useState<boolean>(true);
+  const [fulltimeYes, setFulltimeYes] = useState<boolean>(false);
   const [fulltimeNo, setFulltimeNo] = useState<boolean>(false);
-  const [movilidadYes, setMovilidadYes] = useState<boolean>(true);
+  const [movilidadYes, setMovilidadYes] = useState<boolean>(false);
   const [movilidadNo, setMovilidadNo] = useState<boolean>(false);
 
   const filtrarCandidatos = (filtradoNombre: string, filtradoEdad: string) => {
