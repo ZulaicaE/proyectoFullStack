@@ -1,0 +1,21 @@
+.container {
+  background-color: #61d2b4;
+  border: 1px solid slategray;
+  font-family: 'Ubuntu';
+}
+
+.inputBuscar {
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}

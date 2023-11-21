@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ListGroup } from "react-bootstrap";
 import DataCandidatos from '../dataCanditatos/DataCandidatos';
+import styles from "./FiltroEmployee.module.css";
 
 
 interface FiltroEmployeeProps {
@@ -42,7 +43,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
   }, [filtroEdad]);
 
   useEffect(() => {
-    const candidatosFiltrados = DataCandidatos.filter((candidato:any) => {
+    const candidatosFiltrados = DataCandidatos.filter((candidato: any) => {
       const Fulltime = (!fulltimeYes && candidato.fulltime === 'No') || (!fulltimeNo && candidato.fulltime === 'Si')
       const Movilidad = (!movilidadYes && candidato.movilidad === 'No') || (!movilidadNo && candidato.movilidad === 'Si')
 
@@ -84,25 +85,27 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
   return (
     <div>
       <ListGroup>
-        <ListGroup.Item>
+        <ListGroup.Item className={styles.container}>
           <p>Nombre y apellido:</p>
           <input
             type="text"
             placeholder="Buscar"
             value={filtroNombre}
-            onChange={(e) => filtrarCandidatos(e.target.value,'')}
+            onChange={(e) => filtrarCandidatos(e.target.value, '')}
+            className={styles.inputBuscar}
           />
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className={styles.container}>
           <p>Edad:</p>
-          <input 
+          <input
             type='text'
             placeholder="Buscar"
             value={filtroEdad}
-            onChange={(e) => filtrarCandidatos('',e.target.value)}
+            onChange={(e) => filtrarCandidatos('', e.target.value)}
+            className={styles.inputBuscar}
           />
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className={styles.container}>
           <p>Fulltime:</p>
           <label>
             <input
@@ -112,7 +115,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             />
             Si
           </label>
-        <p />
+          <p />
           <label>
             <input
               type="checkbox"
@@ -122,7 +125,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             No
           </label>
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className={styles.container}>
           <p>Movilidad:</p>
           <label>
             <input
@@ -132,12 +135,12 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             />
             Si
           </label>
-        <p />
+          <p />
           <label>
             <input
               type="checkbox"
               checked={movilidadNo}
-              onChange={() => handleCheckboxChange('No','No')}
+              onChange={() => handleCheckboxChange('No', 'No')}
             />
             No
           </label>
