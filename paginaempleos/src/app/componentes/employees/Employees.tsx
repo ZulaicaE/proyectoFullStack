@@ -13,6 +13,7 @@ interface Candidato {
     fulltime: string;
     movilidad: string;
     img: string;
+    puesto: string;
 }
 
 interface CandidatosFiltradosProps {
