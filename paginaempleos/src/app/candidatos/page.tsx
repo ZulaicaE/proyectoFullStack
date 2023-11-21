@@ -24,16 +24,15 @@ export default function CandidatosPage() {
       <NavBar />
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
-        <div className="d-flex flex-row">
-          <div className='col-2 '>
-          <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
+        <div className={`d-flex flex-row ${styles.containerCol}`}>
+          <div className={`col-2 ${styles.containerFilter}`}>
+            <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
           </div>
-          <div className='col-10 '>
+          <div className='col-10'>
             <Employees candidatosFiltrados={candidatosFiltrados} />
           </div>
         </div>
       </main>
     </>
-
   )
-}      
+}

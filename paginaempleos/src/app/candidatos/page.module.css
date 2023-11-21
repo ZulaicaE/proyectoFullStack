@@ -9,4 +9,12 @@
     padding-bottom: 25px;
     min-height: 100vh;
     background-color: #e0ffcd;
-  }
+}
+
+.containerCol{
+  width: 100%;
+}
+
+.containerFilter {
+  margin-top: 10px;
+}
