@@ -18,7 +18,7 @@ export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
     return (
         <Col>
             <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Img variant="top" src={empleo.img} />
                 <Card.Body>
                     <Card.Title>{empleo.empleo}</Card.Title>
                     <Card.Text>
