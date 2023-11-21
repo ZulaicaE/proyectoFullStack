@@ -1,6 +1,6 @@
 'use client'
 import styles from './page.module.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavBar } from "../componentes/navBar/NavBar";
 import { TituloPrincipal } from "../componentes/tituloJobs/TituloPrincipal";
 import { Banner } from '../componentes/banner/Banner';

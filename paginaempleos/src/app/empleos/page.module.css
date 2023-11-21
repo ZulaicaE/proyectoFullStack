@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    min-height: 100vh;
+    background-color: #e0ffcd;
+  }
