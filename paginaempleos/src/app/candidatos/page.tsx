@@ -25,10 +25,10 @@ export default function CandidatosPage() {
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
         <div className="d-flex flex-row">
-          <div className='col-2 d-flex flex-row justify-content-between align-items-start'>
+          <div className='col-2 '>
           <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
           </div>
-          <div className='col-10 d-flex flex-row justify-content-between'>
+          <div className='col-10 '>
             <Employees candidatosFiltrados={candidatosFiltrados} />
           </div>
         </div>
