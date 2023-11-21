@@ -25,10 +25,10 @@ export default function EmpleosPage() {
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
         <div className="d-flex flex-row">
-          <div className='col-2 d-flex flex-row justify-content-between align-items-start'>
+          <div className='col-2 '>
           <FiltroEmpleos cambiosEmpleosFiltrados={manejoEmpleosFiltrados} />
           </div>
-          <div className='col-10 d-flex flex-row justify-content-between'>
+          <div className='col-10 '>
             <Jobs empleosFiltrados={empleosFiltrados} />
           </div>
         </div>
