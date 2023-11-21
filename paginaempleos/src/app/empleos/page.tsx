@@ -1,5 +1,5 @@
 'use client'
-import styles from '../page.module.css';
+import styles from './page.module.css';
 import React, { useState } from 'react';
 import { NavBar } from "../componentes/navBar/NavBar";
 import { TituloPrincipal } from "../componentes/tituloJobs/TituloPrincipal";
@@ -24,8 +24,8 @@ export default function EmpleosPage() {
       <NavBar />
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
-        <div className="d-flex flex-row">
-          <div className='col-2 '>
+        <div className={`d-flex flex-row ${styles.containerCol}`}>
+          <div className={`col-2 ${styles.containerFilter}`}>
           <FiltroEmpleos cambiosEmpleosFiltrados={manejoEmpleosFiltrados} />
           </div>
           <div className='col-10 '>
