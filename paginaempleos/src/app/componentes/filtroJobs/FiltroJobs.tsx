@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ListGroup } from "react-bootstrap";
 import DataEmpleos from '../dataJobs/DataJobs';
+import styles from './FiltroJobs.module.css';
 
 
 interface FiltroEmpleosProps {
@@ -39,22 +40,24 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
   return (
     <div>
       <ListGroup>
-        <ListGroup.Item>
+        <ListGroup.Item className={styles.container}>
           <p>Rubro:</p>
           <input
             type="text"
             placeholder="Buscar"
             value={filtroRubro}
             onChange={(e) => filtrarEmpleos(e.target.value,'')}
+            className={styles.inputBuscar}
           />
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className={styles.container}>
           <p>Carga Horaria:</p>
           <input 
             type='text'
             placeholder="Buscar"
             value={filtroCargaHoraria}
             onChange={(e) => filtrarEmpleos('', e.target.value)}
+            className={styles.inputBuscar}
           />
         </ListGroup.Item>
       </ListGroup>
