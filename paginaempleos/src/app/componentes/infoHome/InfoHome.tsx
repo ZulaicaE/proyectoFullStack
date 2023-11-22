@@ -12,7 +12,7 @@ export const InfoHome = () => {
                 Si desea una estadía indefinida, podría estar interesado en alguno de los trabajos extravagantes que se realizan por aquí, o si busca emprender el inicio de su grandiosa empresa, es más que bienvenido a pasar por nuestra sección de candidatos para encontrar a esa persona... ese robot... ó extraterrestre que satisfaga lo que usted necesite.
                 <br></br>
                 <br id='cardNoticia'></br>
-                ¡Prepárense para descubrir un universo de imaginación y diversión en cada esquina de nuestra ciudad!.
+                ¡Prepárense para descubrir un universo de imaginación y diversión en cada esquina de nuestra ciudad!
             </article>
             <article className={styles.artNoticias}>
                 <CardNoticia />
