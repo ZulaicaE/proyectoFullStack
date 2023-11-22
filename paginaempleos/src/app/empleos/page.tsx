@@ -16,7 +16,7 @@ export default function EmpleosPage() {
   };
 
   const titulo = "¡Futurama te necesita! Busque su empleo aquí"
-  const src = "/img/bannerJobs/uGottaDo.jpg"
+  const src = "/img/banner/thnkBanner.png"
 
   return (
     <>

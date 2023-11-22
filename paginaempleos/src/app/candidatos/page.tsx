@@ -15,7 +15,7 @@ export default function CandidatosPage() {
       setCandidatosFiltrados(candidatos);
   };
   
-  const src = "/img/banner/thnkBanner.png"
+  const src = "/img/banner/uGottaDo.jpg"
   const titulo = "¡Futurama te necesita! Busque su candidato aquí"
 
   return (
