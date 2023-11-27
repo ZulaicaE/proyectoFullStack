@@ -6,7 +6,7 @@ const dataEmpleos = [
         rubro: "Delivery",
         descripcion: "Buscamos gente que quiera navegar el sistema solar para la entrega de paquetes puerta a puerta.",
         requisitos: "Menor de 30 años, Carnet Profesional D1",
-        cargaHoraria: "6hs",
+        cargaHoraria: "Part-Time",
         img: "./img/empleos/planetExpress.jpg"
     },
     {
@@ -16,7 +16,7 @@ const dataEmpleos = [
         rubro: "Periodismo",
         descripcion: "Se busca profesional apasionado con una mente abierta, que pueda escribir literatura abreviada en nuestra próxima columna semanal.",
         requisitos: "Mayor de edad, publicaciones reconocidas",
-        cargaHoraria: "6hs",
+        cargaHoraria: "Part-Time",
         img: "./img/empleos/escritor.jpg"
     },
     {
@@ -26,7 +26,7 @@ const dataEmpleos = [
         rubro: "Salud",
         descripcion: "En busca de profesionales capacitados en atender casos a través de la galaxia.",
         requisitos: "2 años de experiencia",
-        cargaHoraria: "10hs",
+        cargaHoraria: "Full-Time",
         img: "./img/empleos/cirujano.png"
     },
     {
@@ -36,7 +36,7 @@ const dataEmpleos = [
         rubro: "Comercio",
         descripcion: "Podés ser parte da Slurm, la marca mas famosa de refrescos de la Vía Láctea, necesitamos gente con compromiso y un toque de adictividad.",
         requisitos: "Mayor de edad",
-        cargaHoraria: "8hs",
+        cargaHoraria: "Full-Time",
         img: "./img/empleos/slurm7.png"
     },
     {
@@ -46,7 +46,7 @@ const dataEmpleos = [
         rubro: "Investigación",
         descripcion: "Buscamos gente que pueda analizar y desencriptar idiomas alienígenas, capaz de escribir un alfabeto.",
         requisitos: "Mayor de 21 años, reconocimiento académico",
-        cargaHoraria: "6hs",
+        cargaHoraria: "Part-Time",
         img: "./img/empleos/desencriptador.jpg"
     },
     {
@@ -56,7 +56,7 @@ const dataEmpleos = [
         rubro: "Delivery",
         descripcion: "Necesitamos jóvenes responsables que entreguen nuestras pizzas a tiempo.",
         requisitos: "Mayor de edad",
-        cargaHoraria: "5hs",
+        cargaHoraria: "Part-Time",
         img: "./img/empleos/delivery.png"
     },
     {
@@ -66,7 +66,7 @@ const dataEmpleos = [
         rubro: "Comercio",
         descripcion: "Podés ser parte de Slurm, la marca mas famosa de refrescos de la Vía Láctea, necesitamos gente con compromiso y un toque de adictividad.",
         requisitos: "Licenciado en Administración de Empresas",
-        cargaHoraria: "8hs",
+        cargaHoraria: "Full-Time",
         img: "./img/empleos/slurm7.png"
     },
     {
@@ -76,7 +76,7 @@ const dataEmpleos = [
         rubro: "Industrial",
         descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
         requisitos: "Mayor de edad",
-        cargaHoraria: "8hs",
+        cargaHoraria: "Full-Time",
         img: "./img/empleos/montaje.png"
     },
 
