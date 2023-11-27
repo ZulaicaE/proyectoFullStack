@@ -29,9 +29,8 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
   }, [filtroRubro]);
 
   useEffect(() => {
-    // Filter cards based on checkbox selections
     const empleosFiltrados = DataEmpleos.filter((empleo : any) => {
-      if ((!fulltime && empleo.cargaHoraria === 'Full-Time') || (!parttime && empleo.cargaHoraria === 'Part-Time')) {
+      if ((!fulltime && empleo.cargaHoraria === 'Part-Time') || (!parttime && empleo.cargaHoraria === 'Full-Time')) {
         return true;
       }
       return false;
@@ -44,12 +43,12 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
     if (type === 'Full-Time') {
       setFulltime(!fulltime);
       if (!fulltime) {
-        setParttime(false); // Uncheck 'no' if 'yes' is checked
+        setParttime(false);
       }
     } else if (type === 'Part-Time') {
       setParttime(!parttime);
       if (!parttime) {
-        setFulltime(false); // Uncheck 'yes' if 'no' is checked
+        setFulltime(false);
       }
     }
   };
