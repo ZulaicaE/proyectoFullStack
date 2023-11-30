@@ -4,15 +4,15 @@ import "./NavBar.css"
 const links = [{
   label: 'Home',
   route: '/',
-  image: './img/navBar/home.png'
+  image: './img/navBar/inicioNew.png'
 }, {
   label: 'Empleos',
   route: '/empleos',
-  image: './img/navBar/empleos.png'
+  image: './img/navBar/empleosNew.png'
 }, {
   label: 'Candidatos',
   route: '/candidatos',
-  image: './img/navBar/trabajador.png'
+  image: './img/navBar/candidatosNew.png'
 }]
 
 export const NavBar = () => {
@@ -27,8 +27,8 @@ export const NavBar = () => {
         {links.map(({ label, route, image }) => (
           <li key={route}>
             <Link href={route}>
-              {image && <img src={image} alt={`${label} Icon`} className="navIcon" />}
-              {label}
+              {<><img src={image} alt={`${label} Icon`} className="navIcon" /> <span><p>{label}</p></span></> }
+              
             </Link>
           </li>
         ))}
