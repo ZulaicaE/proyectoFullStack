@@ -10,22 +10,22 @@ interface FiltroEmployeeProps {
 
 export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidatosFiltrados }) => {
   const [filtroNombre, setFiltroNombre] = useState<string>('');
-  const [filtroEdad, setFiltroEdad] = useState<string>('');
+  const [minEdad, setMinEdad] = useState<number | ''>('');
+  const [maxEdad, setMaxEdad] = useState<number | ''>('');
   const [fulltimeYes, setFulltimeYes] = useState<boolean>(false);
   const [fulltimeNo, setFulltimeNo] = useState<boolean>(false);
   const [movilidadYes, setMovilidadYes] = useState<boolean>(false);
   const [movilidadNo, setMovilidadNo] = useState<boolean>(false);
 
-  const filtrarCandidatos = (filtradoNombre: string, filtradoEdad: string) => {
+  const filtrarCandidatos = (filtradoNombre: string) => {
     setFiltroNombre(filtradoNombre);
-    setFiltroEdad(filtradoEdad);
   };
 
   useEffect(() => {
     const candidatosFiltrados = DataCandidatos.filter((candidato: any) => {
       return (
-        candidato.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) ||
-        candidato.apellido.toLowerCase().includes(filtroNombre.toLowerCase())
+        candidato.nombre.toLowerCase().startsWith(filtroNombre.toLowerCase()) ||
+        candidato.apellido.toLowerCase().startsWith(filtroNombre.toLowerCase())
       );
     });
 
@@ -33,14 +33,25 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
   }, [filtroNombre]);
 
   useEffect(() => {
-    const candidatosFiltrados = DataCandidatos.filter((candidato: any) => {
-      return (
-        candidato.edad.toLowerCase().includes(filtroEdad.toLowerCase())
-      );
-    });
+    if (minEdad !== '' && maxEdad !== '' && minEdad >= maxEdad) {
+      // If invalid input, reset to previous valid state
+      setMinEdad(maxEdad - 1);
+    } else {
+      const candidatosFiltrados = DataCandidatos.filter((candidato) => {
+        const cardEdad = parseInt(candidato.edad);
+        return (
+          (minEdad === '' || cardEdad >= minEdad) &&
+          (maxEdad === '' || cardEdad <= maxEdad)
+        );
+      });
+     cambiosCandidatosFiltrados(candidatosFiltrados); 
+    }
+  }, [minEdad, maxEdad]);
 
-    cambiosCandidatosFiltrados(candidatosFiltrados);
-  }, [filtroEdad]);
+  const handleReset = () => {
+    setMinEdad('');
+    setMaxEdad('');
+  };
 
   useEffect(() => {
     const candidatosFiltrados = DataCandidatos.filter((candidato: any) => {
@@ -91,19 +102,35 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             type="text"
             placeholder="Buscar"
             value={filtroNombre}
-            onChange={(e) => filtrarCandidatos(e.target.value, '')}
+            onChange={(e) => filtrarCandidatos(e.target.value)}
             className={styles.inputBuscar}
           />
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
           <p>Edad:</p>
-          <input
-            type='text'
-            placeholder="Buscar"
-            value={filtroEdad}
-            onChange={(e) => filtrarCandidatos('', e.target.value)}
-            className={styles.inputBuscar}
-          />
+          <label>
+            <span> Min </span>
+            <input 
+              type="number"
+              placeholder='Min. 18'
+              value={minEdad}
+              onChange={(e) => setMinEdad(parseInt(e.target.value))} 
+              min={18}
+              max={99} />
+          </label>
+          <p />
+          <label>
+            <span> Max </span>
+            <input 
+              type="number" 
+              placeholder='Max. 100'
+              value={maxEdad}
+              onChange={(e) => setMaxEdad(parseInt(e.target.value))} 
+              min={19}
+              max={100}/>
+          </label>
+          <p />
+          <button onClick={handleReset}>Reset</button>
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
           <p>Fulltime:</p>
