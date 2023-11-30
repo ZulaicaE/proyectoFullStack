@@ -34,7 +34,6 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
 
   useEffect(() => {
     if (minEdad !== '' && maxEdad !== '' && minEdad >= maxEdad) {
-      // If invalid input, reset to previous valid state
       setMinEdad(maxEdad - 1);
     } else {
       const candidatosFiltrados = DataCandidatos.filter((candidato) => {
@@ -140,7 +139,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               checked={fulltimeYes}
               onChange={() => handleCheckboxChange('Si', 'Si')}
             />
-            Si
+            <span> Si </span>
           </label>
           <p />
           <label>
@@ -149,7 +148,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               checked={fulltimeNo}
               onChange={() => handleCheckboxChange('No', 'Si')}
             />
-            No
+            <span> No </span>
           </label>
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
@@ -160,7 +159,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               checked={movilidadYes}
               onChange={() => handleCheckboxChange('Si', 'No')}
             />
-            Si
+            <span> Si </span>
           </label>
           <p />
           <label>
@@ -169,7 +168,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               checked={movilidadNo}
               onChange={() => handleCheckboxChange('No', 'No')}
             />
-            No
+            <span> No </span>
           </label>
         </ListGroup.Item>
       </ListGroup>
