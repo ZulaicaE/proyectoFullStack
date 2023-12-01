@@ -21,7 +21,7 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
   useEffect(() => {
     const empleosFiltrados = DataEmpleos.filter((empleo: any) => {
       return (
-        empleo.rubro.toLowerCase().includes(filtroRubro.toLowerCase())
+        empleo.rubro.toLowerCase().startsWith(filtroRubro.toLowerCase())
       );
     });
 
@@ -69,7 +69,7 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
         <ListGroup.Item className={styles.container}>
           <p>Carga Horaria:</p>
           <label>
-            Fulltime
+            <span> Fulltime </span>
             <input
               type="checkbox"
               checked={fulltime}
@@ -78,7 +78,7 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
           </label>
           <p />
           <label>
-            Partime
+            <span> Partime </span>
             <input
               type="checkbox"
               checked={parttime}
