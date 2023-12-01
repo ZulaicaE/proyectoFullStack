@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Button } from "react-bootstrap";
 import DataCandidatos from '../dataCanditatos/DataCandidatos';
 import styles from "./FiltroEmployee.module.css";
 
@@ -129,7 +129,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               max={100}/>
           </label>
           <p />
-          <button onClick={handleReset}>Reset</button>
+          <Button onClick={handleReset} size='sm'>Reset</Button>
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
           <p>Fulltime:</p>
