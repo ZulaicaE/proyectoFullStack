@@ -1,4 +1,4 @@
-import styles from './homeMenu.module.css'
+import  './HomeMenu.css'
 import Link from "next/link"
 
 const links = [{
@@ -26,10 +26,10 @@ const links = [{
 
 export const HomeMenu = () => {
     return (
-        <div className={styles.menu}>
-            <ul className={`${styles.navMenu} list-group list-group-flush`}>
+        <div className="menu">
+            <ul className="navMenu list-group list-group-flush">
                 {links.map(({ label, route }) => (
-                    <li className={`${styles.navMenu} list-group-item`} key={label}>
+                    <li className="navMenu list-group-item" key={label}>
                         <Link href={route}>
                             {label}
                         </Link>
