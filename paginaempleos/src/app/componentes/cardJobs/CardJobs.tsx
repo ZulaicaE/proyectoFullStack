@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Collapse } from 'react-collapse';
 import './CardJobs.css';
 
 interface CardJobsProps {
@@ -16,24 +18,38 @@ interface CardJobsProps {
 }
 
 export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
+
+    const [collapseAbierto, setCollapse] = useState(false);
+
+    const botonCollapse = () => {
+        setCollapse (!collapseAbierto); 
+    };
+
     return (
-            <Card className="h-100 cardJobs">
-                <Card.Img className="jobsImg img-fluid" variant="top" src={empleo.img}/>
-                <Card.Body>
-                    <Card.Title className="tituloCardJobs">{empleo.empleo}</Card.Title>
-                    <p><strong>{empleo.empresa}</strong></p>
-                    <Card.Text>
-                        <u>Rubro</u>: <span>{empleo.rubro}</span><br />
-                        <u>Descripción</u>: <span>{empleo.descripcion}</span><br />
-                        <u>Carga Horaria</u>: <span>{empleo.cargaHoraria}</span><br />
-                        <u>Requisitos</u>: <span>{empleo.requisitos}</span>
-                    </Card.Text>
-
-                </Card.Body>
+        <Card className="h-100 cardJobs">
+            <Card.Img className="jobsImg img-fluid" variant="top" src={empleo.img} />
+            <Card.Body>
+                <Card.Title className="tituloCardJobs">{empleo.empleo}</Card.Title>
+                <p><strong>{empleo.empresa}</strong></p>
                 <div className="d-flex justify-content-center botonCV">
-                        <Button variant="outline-dark">Aplicar</Button>
-                    </div>   
-            </Card>
+                <Button variant="outline-dark" onClick={botonCollapse}>
+                    {collapseAbierto ? 'Ocultar Detalles' : 'Mostrar Detalles'}
+                </Button>
+                </div>
+                <Collapse isOpened={collapseAbierto}>
+                    <div>
+                        <Card.Text>
+                            <u>Rubro</u>: <span>{empleo.rubro}</span><br />
+                            <u>Descripción</u>: <span>{empleo.descripcion}</span><br />
+                            <u>Carga Horaria</u>: <span>{empleo.cargaHoraria}</span><br />
+                            <u>Requisitos</u>: <span>{empleo.requisitos}</span>
+                        </Card.Text>
+                    </div>
+                </Collapse>
+            </Card.Body>
+            <div className="d-flex justify-content-center botonCV">
+                <Button variant="outline-dark">Aplicar</Button>
+            </div>
+        </Card>
     );
-}
-
+};
