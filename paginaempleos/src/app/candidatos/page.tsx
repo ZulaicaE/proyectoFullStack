@@ -1,20 +1,62 @@
 'use client'
 import styles from './page.module.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavBar } from "../componentes/navBar/NavBar";
 import { TituloPrincipal } from "../componentes/tituloJobs/TituloPrincipal";
 import { Banner } from '../componentes/banner/Banner';
 import { Employees } from '../componentes/employees/Employees';
 import { FiltroEmployee } from '../componentes/filtroEmployee/FiltroEmployee';
+import { Paginado } from '../componentes/paginado/Paginado'
 
 export default function CandidatosPage() {
 
   const [candidatosFiltrados, setCandidatosFiltrados] = useState([]);
+  const [paginaActual, setPaginaActual] = useState<number>(1);
+  const [cardsPorPagina, setCardsPorPagina] = useState<number>(calcularCardsPorPagina);
+
+  function calcularCardsPorPagina() {
+      const screenWidth = window.innerWidth;
+      
+      if (screenWidth <= 576) {
+        return 1;
+      } else if (screenWidth <= 768) {
+        return 2;
+      } else if (screenWidth <= 1180) {
+        return 3;
+      } else if (screenWidth <= 1366) {
+        return 4;
+      } else {
+        return 6
+      }
+  }
 
   const manejoCandidatosFiltrados = (candidatos: any) => {
       setCandidatosFiltrados(candidatos);
+      setPaginaActual(1);
   };
+
   
+  useEffect(() => {
+    function handleResize() {
+      setCardsPorPagina(calcularCardsPorPagina());
+      setPaginaActual(1);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const indexLastCard = paginaActual * cardsPorPagina;
+  const indexFirstCard = indexLastCard - cardsPorPagina;
+  const cardsActuales = candidatosFiltrados.slice(indexFirstCard, indexLastCard);
+
+  const paginasTotales = Math.ceil(candidatosFiltrados.length / cardsPorPagina);
+
+  const handlePaginaChange = (page: number) => setPaginaActual(page);
+
   const src = "/img/banner/uGottaDo.jpg"
   const titulo = "¡Futurama te necesita! Busque su candidato aquí"
 
@@ -29,7 +71,12 @@ export default function CandidatosPage() {
             <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
           </div>
           <div className='col-10'>
-            <Employees candidatosFiltrados={candidatosFiltrados} />
+            <Employees candidatosFiltrados={cardsActuales} />
+            <Paginado
+              paginaActual={paginaActual}
+              paginasTotales={paginasTotales}
+              onPaginaChange={handlePaginaChange}
+            />
           </div>
         </div>
       </main>
