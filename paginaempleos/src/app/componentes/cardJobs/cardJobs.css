@@ -26,6 +26,7 @@ span {
 
 .botonCV {
     padding-bottom: 10px;
+    gap: 8px;
 }
 
 .botonCV button {

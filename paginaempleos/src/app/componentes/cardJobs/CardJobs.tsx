@@ -32,9 +32,7 @@ export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
                 <Card.Title className="tituloCardJobs">{empleo.empleo}</Card.Title>
                 <p><strong>{empleo.empresa}</strong></p>
                 <div className="d-flex justify-content-center botonCV">
-                <Button variant="outline-dark" onClick={botonCollapse}>
-                    {collapseAbierto ? 'Ocultar Detalles' : 'Mostrar Detalles'}
-                </Button>
+                
                 </div>
                 <Collapse isOpened={collapseAbierto}>
                     <div>
@@ -48,7 +46,12 @@ export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
                 </Collapse>
             </Card.Body>
             <div className="d-flex justify-content-center botonCV">
-                <Button variant="outline-dark">Aplicar</Button>
+                <Button variant="outline-dark" onClick={botonCollapse}>
+                    {collapseAbierto ? 'Ocultar Detalles' : 'Mostrar Detalles'}
+                </Button>
+                <Button variant="outline-dark">
+                    Aplicar
+                </Button>
             </div>
         </Card>
     );
