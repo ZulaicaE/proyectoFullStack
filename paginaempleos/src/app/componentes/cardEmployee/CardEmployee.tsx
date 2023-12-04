@@ -24,7 +24,7 @@ export const CardEmployee: React.FC<CardEmployeeProps> = ({ candidato }) => {
              <Image src={candidato.img} roundedCircle fluid className='imgCardEmployee' />
             </div>            
             <Card.Body className='d-flex flex-column justify-content-between'>
-                <Card.Title className='tituloCardEmployee'>{candidato.nombre}, {candidato.apellido}</Card.Title>
+                <Card.Title className='tituloCardEmployee'>{candidato.nombre} {candidato.apellido}</Card.Title>
                 <p><strong>{candidato.puesto}</strong></p>
                 <Card.Text>
                     <u>Edad</u>: <span className='cardTextInfo'>{candidato.edad}</span> <br />
