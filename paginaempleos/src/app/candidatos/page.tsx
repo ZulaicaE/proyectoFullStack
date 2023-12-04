@@ -68,9 +68,11 @@ export default function CandidatosPage() {
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
         <div className={`d-flex flex-row ${styles.containerCol}`}>
-          <div className={`col-2 ${styles.containerFilter}`}>
+          <div className={`colIzq ${styles.containerFilter}`}>
+            <div className='pegadizo'>
             <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
             <BotonCargarCandidato /> 
+            </div>
           </div>
           <div className='col-10'>
             <Employees candidatosFiltrados={cardsActuales} />
