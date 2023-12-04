@@ -11,7 +11,7 @@ import  BotonCargarCandidato from '../componentes/cargarCandidato/BotonCargarCan
 
 export default function CandidatosPage() {
 
-  const [candidatosFiltrados, setCandidatosFiltrados] = useState([]);
+  const [candidatosFiltrados, setCandidatosFiltrados] = useState<any>([]);
   const [paginaActual, setPaginaActual] = useState<number>(1);
   const [cardsPorPagina, setCardsPorPagina] = useState<number>(calcularCardsPorPagina);
 
@@ -35,6 +35,12 @@ export default function CandidatosPage() {
       setCandidatosFiltrados(candidatos);
       setPaginaActual(1);
   };
+
+  const agregarNuevoCandidato = (nuevoCandidato: any) => {
+    const nuevosCandidatos = [...candidatosFiltrados];
+    nuevosCandidatos.unshift(nuevoCandidato);
+    setCandidatosFiltrados(nuevosCandidatos);
+};
 
   
   useEffect(() => {
@@ -70,7 +76,7 @@ export default function CandidatosPage() {
         <div className={`d-flex flex-row ${styles.containerCol}`}>
           <div className={`col-2 ${styles.containerFilter}`}>
             <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
-            <BotonCargarCandidato /> 
+            <BotonCargarCandidato onSubmitCandidato={agregarNuevoCandidato} />
           </div>
           <div className='col-10'>
             <Employees candidatosFiltrados={cardsActuales} />

@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import FormCandidato from '../formCandidato/FormCandidato';
 
-function BotonCargarCadidato() {
+function BotonCargarCadidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandidato: any) => void }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -20,7 +20,7 @@ function BotonCargarCadidato() {
           <Offcanvas.Title>Candidato:</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-            <FormCandidato/>
+            <FormCandidato onSubmitCandidato={onSubmitCandidato}/>
         </Offcanvas.Body>
       </Offcanvas>
     </>
