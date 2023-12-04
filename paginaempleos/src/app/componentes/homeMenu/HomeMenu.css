@@ -1,11 +1,14 @@
 .menu{
     font-family: 'Ubuntu';
     background-color: #61d2b4;
-    margin: 10px;
-    padding: 30px;
+    margin-top: 10px;
+    padding: 20px;
     border-radius: 6px;
     border: 1px solid slategray;
+    width: 250px;
+    
 }
+
 
 .navMenu{    
     list-style: none;

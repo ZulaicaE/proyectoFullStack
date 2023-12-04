@@ -26,7 +26,7 @@ const links = [{
 
 export const HomeMenu = () => {
     return (
-        <div className="menu">
+        <div className="pegadizo menu">
             <ul className="navMenu list-group list-group-flush">
                 {links.map(({ label, route }) => (
                     <li className="navMenu list-group-item" key={label}>

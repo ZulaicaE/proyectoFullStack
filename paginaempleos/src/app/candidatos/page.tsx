@@ -7,7 +7,7 @@ import { Banner } from '../componentes/banner/Banner';
 import { Employees } from '../componentes/employees/Employees';
 import { FiltroEmployee } from '../componentes/filtroEmployee/FiltroEmployee';
 import { Paginado } from '../componentes/paginado/Paginado'
-import  BotonCargarCandidato from '../componentes/cargarCandidato/BotonCargarCandidato'
+import BotonCargarCandidato from '../componentes/cargarCandidato/BotonCargarCandidato'
 
 export default function CandidatosPage() {
 
@@ -16,32 +16,31 @@ export default function CandidatosPage() {
   const [cardsPorPagina, setCardsPorPagina] = useState<number>(calcularCardsPorPagina);
 
   function calcularCardsPorPagina() {
-      const screenWidth = window.innerWidth;
-      
-      if (screenWidth <= 576) {
-        return 1;
-      } else if (screenWidth <= 768) {
-        return 2;
-      } else if (screenWidth <= 1180) {
-        return 3;
-      } else if (screenWidth <= 1366) {
-        return 4;
-      } else {
-        return 6
-      }
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 576) {
+      return 1;
+    } else if (screenWidth <= 768) {
+      return 2;
+    } else if (screenWidth <= 1180) {
+      return 3;
+    } else if (screenWidth <= 1366) {
+      return 4;
+    } else {
+      return 6
+    }
   }
 
   const manejoCandidatosFiltrados = (candidatos: any) => {
-      setCandidatosFiltrados(candidatos);
-      setPaginaActual(1);
+    setCandidatosFiltrados(candidatos);
+    setPaginaActual(1);
   };
 
   const agregarNuevoCandidato = (nuevoCandidato: any) => {
     const nuevosCandidatos = [...candidatosFiltrados];
     nuevosCandidatos.unshift(nuevoCandidato);
     setCandidatosFiltrados(nuevosCandidatos);
-};
-
+  };
   
   useEffect(() => {
     function handleResize() {
@@ -74,9 +73,11 @@ export default function CandidatosPage() {
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
         <div className={`d-flex flex-row ${styles.containerCol}`}>
-          <div className={`col-2 ${styles.containerFilter}`}>
-            <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
-            <BotonCargarCandidato onSubmitCandidato={agregarNuevoCandidato} />
+          <div className={`colIzq ${styles.containerFilter}`}>
+            <div className='pegadizo'>
+              <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
+              <BotonCargarCandidato onSubmitCandidato={agregarNuevoCandidato} />
+            </div>
           </div>
           <div className='col-10'>
             <Employees candidatosFiltrados={cardsActuales} />

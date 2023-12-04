@@ -13,3 +13,7 @@
   font-size: larger;
   font-weight: bolder;
 }
+
+.d-flex {
+  margin-bottom: 0;
+}
