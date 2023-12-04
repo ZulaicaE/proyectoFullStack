@@ -6,6 +6,7 @@ import { TituloPrincipal } from "../componentes/tituloJobs/TituloPrincipal";
 import { Banner } from '../componentes/banner/Banner';
 import { Employees } from '../componentes/employees/Employees';
 import { FiltroEmployee } from '../componentes/filtroEmployee/FiltroEmployee';
+import  BotonCargarCandidato from '../componentes/cargarCandidato/BotonCargarCandidato'
 
 export default function CandidatosPage() {
 
@@ -27,6 +28,7 @@ export default function CandidatosPage() {
         <div className={`d-flex flex-row ${styles.containerCol}`}>
           <div className={`col-2 ${styles.containerFilter}`}>
             <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
+            <BotonCargarCandidato /> 
           </div>
           <div className='col-10'>
             <Employees candidatosFiltrados={candidatosFiltrados} />
