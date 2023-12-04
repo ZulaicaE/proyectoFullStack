@@ -11,7 +11,7 @@ import BotonCargarCandidato from '../componentes/cargarCandidato/BotonCargarCand
 
 export default function CandidatosPage() {
 
-  const [candidatosFiltrados, setCandidatosFiltrados] = useState([]);
+  const [candidatosFiltrados, setCandidatosFiltrados] = useState<any>([]);
   const [paginaActual, setPaginaActual] = useState<number>(1);
   const [cardsPorPagina, setCardsPorPagina] = useState<number>(calcularCardsPorPagina);
 
@@ -36,7 +36,12 @@ export default function CandidatosPage() {
     setPaginaActual(1);
   };
 
-
+  const agregarNuevoCandidato = (nuevoCandidato: any) => {
+    const nuevosCandidatos = [...candidatosFiltrados];
+    nuevosCandidatos.unshift(nuevoCandidato);
+    setCandidatosFiltrados(nuevosCandidatos);
+  };
+  
   useEffect(() => {
     function handleResize() {
       setCardsPorPagina(calcularCardsPorPagina());
@@ -71,7 +76,7 @@ export default function CandidatosPage() {
           <div className={`colIzq ${styles.containerFilter}`}>
             <div className='pegadizo'>
               <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
-              <BotonCargarCandidato />
+              <BotonCargarCandidato onSubmitCandidato={agregarNuevoCandidato} />
             </div>
           </div>
           <div className='col-10'>

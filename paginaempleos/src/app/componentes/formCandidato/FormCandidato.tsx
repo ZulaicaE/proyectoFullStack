@@ -2,11 +2,12 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import { ListGroup } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
 
-function FormCandidato() {
+
+//
+function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandidato: any) => void }) {
     const [validated, setValidated] = useState(false);
     const [fulltimeYes, setFulltimeYes] = useState<boolean>(false);
     const [fulltimeNo, setFulltimeNo] = useState<boolean>(false);
@@ -15,12 +16,27 @@ function FormCandidato() {
 
     const handleFormSubmit = (event: any) => {
         const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
 
-        setValidated(true);
+        const formData = {
+            id: "0",
+            nombre: form.elements["validationName"].value,
+            apellido: form.elements["validationApellido"].value,
+            edad: form.elements["validationEdad"].value,
+            linkCV: form.elements["validationLinkedIn"].value,
+            skills: form.elements["validationSkills"].value,
+            fulltime: fulltimeYes ? 'Si' : fulltimeNo ? 'No' : '',
+            movilidad: movilidadYes ? 'Si' : movilidadNo ? 'No' : '',
+            img: form.elements["formFile"].value.split('\\').pop(),
+            puesto: form.elements["validationProfesion"].value
+        };
+
+        console.log(formData);
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        onSubmitCandidato(formData);
+
     };
 
     const handleCheckboxChange = (type: 'Si' | 'No', secondType: 'Si' | 'No') => {
@@ -51,7 +67,7 @@ function FormCandidato() {
         }
     };
 
-    
+
 
     return (
         <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -147,7 +163,7 @@ function FormCandidato() {
                 </Form.Group>
             </Row>
             <Row className="mb-3">
-            <Form.Group as={Col} md="auto" controlId="validationSkills">
+                <Form.Group as={Col} md="auto" controlId="validationSkills">
                     <Form.Label>Skills:</Form.Label>
                     <Form.Control
                         required
@@ -156,12 +172,15 @@ function FormCandidato() {
                         defaultValue=""
                     />
                     <Form.Control.Feedback>Parece bien!</Form.Control.Feedback>
-            </Form.Group>
+                </Form.Group>
             </Row>
             <Row>
-            <Form.Group controlId="formFile">
-                  <Form.Label>Foto Perfil:</Form.Label>
-                  <Form.Control type="file" accept='.jpg, .jpeg, .png'  />
+                <Form.Group controlId="formFile">
+                    <Form.Label>Foto Perfil:</Form.Label>
+                    <Form.Control
+                        type="file"
+                        accept=".jpg, .jpeg, .png"
+                    />
                     <Form.Text className="text-danger"></Form.Text>
                 </Form.Group>
             </Row>
