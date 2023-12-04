@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Collapse } from 'react-collapse';
 import './CardJobs.css';
+import { PopUp } from '../aplicarCV/AplicarCV';
 
 interface CardJobsProps {
     empleo: {
@@ -19,6 +20,7 @@ interface CardJobsProps {
 
 export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
 
+    const [showModal, setShowModal] = useState(false);
     const [collapseAbierto, setCollapse] = useState(false);
 
     const botonCollapse = () => {
@@ -49,10 +51,11 @@ export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
                 <Button variant="outline-dark" onClick={botonCollapse}>
                     {collapseAbierto ? 'Ocultar Detalles' : 'Mostrar Detalles'}
                 </Button>
-                <Button variant="outline-dark">
+                <Button variant="outline-dark" onClick={() => setShowModal(true)}>
                     Aplicar
                 </Button>
             </div>
+            <PopUp showModal={showModal} empleo={empleo.empleo} onClose={() => setShowModal(false)} />
         </Card>
     );
 };
