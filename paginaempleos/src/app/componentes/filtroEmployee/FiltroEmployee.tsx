@@ -93,7 +93,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
   };
 
   return (
-    <div>
+    <div className=''>
       <ListGroup>
         <ListGroup.Item className={styles.container}>
           <p>Nombre y apellido:</p>
