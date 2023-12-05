@@ -6,7 +6,7 @@
 }
 
 .contenedor {
-    max-width: 100%;
+    max-width: 100vw;
     font-family: "Ubuntu";
     padding: 50px 5%;
     display: flex;
@@ -28,9 +28,9 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -10px;
+    bottom: -1vh;
     background-color: white;
-    height: 2px;
+    height: 0.2vh;
     box-sizing: border-box;
     width: 50px;
 }
@@ -139,16 +139,42 @@
 @media(max-width: 1183px) {
     .col {
         width: 40%;
-        margin-bottom: 30px;
+        margin-bottom: 2vh;
     }
     .github{
         width:100%;
     }
+    
 }
 
 @media(max-width: 992px) {
     .col {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 1vh;
+    }
+    .contenedor{
+        padding: 2vh 2vw;
+    }
+    .col h2{
+   font-size: 2vw;
+   margin-bottom: 2vh;
+    }
+    .col li{
+        font-size: 1.5vw;
+    }
+    .telUtiles dl{
+        font-size: 1.2vw;
+    }
+    .telUtiles dd{
+        font-size: 1.3vw;
+    }
+}
+@media(max-width:800px) {
+    .col h2::before{
+        height: 0.15vh;
+        bottom: -0.5vh;
+    }
+    .col h2{
+        margin-bottom: 1vh;
     }
 }
