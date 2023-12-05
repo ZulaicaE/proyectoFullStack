@@ -16,3 +16,12 @@
   background-color: #0D7377!important;
   border-color: #0D7377!important;
 }
+
+.offCanvasContainer {
+  background-color: #61d2b4;
+  font-family: 'Ubuntu';
+}
+
+.offCanvasHeader {
+  border-bottom: 2px solid slategrey;
+}

@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { ListGroup } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
+import './FormCandidato.css'
 
 
 //
@@ -78,6 +79,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                         required
                         type="text"
                         defaultValue=""
+                        className='inputForm'
                     />
                     <Form.Control.Feedback>Parece bien!</Form.Control.Feedback>
                 </Form.Group>
@@ -87,6 +89,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                         required
                         type="text"
                         defaultValue=""
+                        className='inputForm'
                     />
                     <Form.Control.Feedback>Parece bien!</Form.Control.Feedback>
                 </Form.Group>
@@ -94,14 +97,14 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
             <Row className="mb-3">
                 <Form.Group as={Col} md="8" controlId="validationLinkedIn">
                     <Form.Label>LinkedIn:</Form.Label>
-                    <Form.Control type="text" placeholder="" required />
+                    <Form.Control type="text" placeholder="" required className='inputForm'/>
                     <Form.Control.Feedback type="invalid">
                         Debe ingresar su LinkedIn
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="4" controlId="validationEdad">
-                    <Form.Label>Edad</Form.Label>
-                    <Form.Control type="number" placeholder="" required />
+                    <Form.Label>Edad:</Form.Label>
+                    <Form.Control type="number" placeholder="" required className='inputForm'/>
                     <Form.Control.Feedback type="invalid">
                         Debe ser mayor de edad
                     </Form.Control.Feedback>
@@ -110,7 +113,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
             <Row className="mb-3">
                 <Form.Group as={Col} md="8" controlId="validationProfesion">
                     <Form.Label>Profesión:</Form.Label>
-                    <Form.Control type="text" placeholder="" required />
+                    <Form.Control type="text" placeholder="" required className='inputForm'/>
                     <Form.Control.Feedback type="invalid">
                         Debe ingresar una Profesión
                     </Form.Control.Feedback>
@@ -125,8 +128,9 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={fulltimeYes}
                                 onChange={() => handleCheckboxChange('Si', 'Si')}
+                                className='fulltimeMovilidadPointer'
                             />
-                            <span> Si </span>
+                            <span className='fulltimeMovilidadPointer'> Si </span>
                         </label>
                         <p />
                         <label>
@@ -134,8 +138,9 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={fulltimeNo}
                                 onChange={() => handleCheckboxChange('No', 'Si')}
+                                className='fulltimeMovilidadPointer'
                             />
-                            <span> No </span>
+                            <span className='fulltimeMovilidadPointer'> No </span>
                         </label>
                     </ListGroup.Item>
                 </Form.Group>
@@ -147,8 +152,9 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={movilidadYes}
                                 onChange={() => handleCheckboxChange('Si', 'No')}
+                                className='fulltimeMovilidadPointer'
                             />
-                            <span> Si </span>
+                            <span className='fulltimeMovilidadPointer'> Si </span>
                         </label>
                         <p />
                         <label>
@@ -156,8 +162,9 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={movilidadNo}
                                 onChange={() => handleCheckboxChange('No', 'No')}
+                                className='fulltimeMovilidadPointer'
                             />
-                            <span> No </span>
+                            <span className='fulltimeMovilidadPointer'> No </span>
                         </label>
                     </ListGroup.Item>
                 </Form.Group>
@@ -170,6 +177,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                         type="text"
                         placeholder="min 3, max 5"
                         defaultValue=""
+                        className='inputForm'
                     />
                     <Form.Control.Feedback>Parece bien!</Form.Control.Feedback>
                 </Form.Group>
@@ -192,7 +200,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                     feedbackType="invalid"
                 />
             </Form.Group>
-            <Button type="submit">Cargar Tarjeta</Button>
+            <Button type="submit" className='btnCargarOff'>Cargar Tarjeta</Button>
         </Form>
     );
 }

@@ -16,8 +16,8 @@ function BotonCargarCadidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoC
         Cargar Tarjeta
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose} backdrop="static">
-        <Offcanvas.Header closeButton>
+      <Offcanvas show={show} onHide={handleClose} backdrop="static" className='offCanvasContainer'>
+        <Offcanvas.Header closeButton className='offCanvasHeader'>
           <Offcanvas.Title>Candidato:</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
