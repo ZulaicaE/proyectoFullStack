@@ -3,16 +3,17 @@
     background-color: #61d2b4;
     margin-top: 10px;
     padding: 20px;
+    
     border-radius: 6px;
     border: 1px solid slategray;
-    width: 250px;
+    width: 100%;
     
 }
 
 
 .navMenu{    
     list-style: none;
-    padding: 0;
+    padding: 0px 5px 5px 10px;
     margin: 0;
 }
 
@@ -20,6 +21,8 @@
     background-color: transparent;
     border-bottom: 1px solid black;
     transition: box-shadow 0.3s ease;
+    
+    justify-content: center;
 }
 
 .navMenu li:hover {
@@ -28,7 +31,32 @@
 }
 
 .navMenu li a {
-    font-size: 21px;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
     text-decoration: none;
     color: black;
+}
+
+@media(max-width: 1366px) {
+    
+    .menu{
+        align-items: center;
+        padding: 0 10px 0 10px;
+    }
+    .navMenu{
+      display: flex!important;
+      flex-direction: row!important;
+      margin: 0;
+      gap: 5vw;
+      padding: 0;
+      
+    }
+    .navMenu li{
+        width: 10vw;
+        justify-content: center;
+    }
+    .navMenu li a{
+        font-size: 2vw;
+    }
 }

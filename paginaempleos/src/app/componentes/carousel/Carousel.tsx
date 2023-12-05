@@ -24,12 +24,14 @@ export const ImageCarousel = () => {
     setIndex(selectedIndex);
   };
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} className={styles.imageCarousel} pause={"hover"} indicators={false}>
+    <div className={styles.carousel}>
+      <Carousel activeIndex={index} onSelect={handleSelect} className={styles.imageCarousel} pause={"hover"} indicators={false}>
       {slides.map(({ id, desc, image }) => (
         <Carousel.Item key={id} className={styles.itemCarousel} interval={4000}>
           <img src={image} alt={desc} />
         </Carousel.Item>
       ))}
     </Carousel>
+    </div>
   );
 }

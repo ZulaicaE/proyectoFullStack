@@ -18,11 +18,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo}/>
-        <div className="d-flex flex-row">
-          <div className='colIzq d-flex flex-row justify-content-between align-items-start'>
+        <div className={styles.contenedor}>
+          <div className={`justify-content-between align-items-start ${styles.colIzq}`}>
             <HomeMenu />
           </div>
-          <div className='col-10 d-flex flex-row justify-content-between'>
+          <div className={`d-flex flex-row justify-content-between ${styles.colDer}`}>
             <InfoHome />
           </div>
         </div>

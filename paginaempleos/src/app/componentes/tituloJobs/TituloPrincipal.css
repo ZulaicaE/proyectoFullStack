@@ -1,9 +1,9 @@
 .titulo {
   display: flex;
   justify-content: center;
-
+  font-size: 3vw;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 2vw;
   font-family: 'Ubuntu';
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
