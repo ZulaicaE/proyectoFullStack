@@ -15,6 +15,12 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
     const [movilidadYes, setMovilidadYes] = useState<boolean>(false);
     const [movilidadNo, setMovilidadNo] = useState<boolean>(false);
 
+    const [file, setFile] = useState<any>();
+
+    const handleOnChangeImg = (e: any) => {
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
+
     const handleFormSubmit = (event: any) => {
         const form = event.currentTarget;
 
@@ -27,7 +33,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
             skills: form.elements["validationSkills"].value,
             fulltime: fulltimeYes ? 'Si' : fulltimeNo ? 'No' : '',
             movilidad: movilidadYes ? 'Si' : movilidadNo ? 'No' : '',
-            img: form.elements["formFile"].value.split('\\').pop(),
+            img: file,
             puesto: form.elements["validationProfesion"].value
         };
 
@@ -188,6 +194,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                     <Form.Control
                         type="file"
                         accept=".jpg, .jpeg, .png"
+                        onChange={handleOnChangeImg}
                     />
                     <Form.Text className="text-danger"></Form.Text>
                 </Form.Group>
