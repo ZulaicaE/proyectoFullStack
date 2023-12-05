@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import FormCandidato from '../formCandidato/FormCandidato';
+import "./BotonCargarCandidato.css"
 
 function BotonCargarCadidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandidato: any) => void }) {
   const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ function BotonCargarCadidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoC
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button onClick={handleShow} className='btnCargar'>
         Cargar Tarjeta
       </Button>
 

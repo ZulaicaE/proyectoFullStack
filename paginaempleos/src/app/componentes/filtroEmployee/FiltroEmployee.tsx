@@ -93,13 +93,13 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
   };
 
   return (
-    <div className=''>
+    <div className={styles.divFiltro}>
       <ListGroup>
         <ListGroup.Item className={styles.container}>
           <p>Nombre y apellido:</p>
           <input
             type="text"
-            placeholder="Buscar"
+            placeholder="Buscar..."
             value={filtroNombre}
             onChange={(e) => filtrarCandidatos(e.target.value)}
             className={styles.inputBuscar}
@@ -107,7 +107,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
           <p>Edad:</p>
-          <label>
+          <label className={styles.EdadMinMaxContainer}>
             <span> Min </span>
             <input 
               type="number"
@@ -115,10 +115,12 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               value={minEdad}
               onChange={(e) => setMinEdad(parseInt(e.target.value))} 
               min={18}
-              max={99} />
+              max={99}
+              className={styles.EdadMinMax}
+            />
           </label>
           <p />
-          <label>
+          <label className={styles.EdadMinMaxContainer}>
             <span> Max </span>
             <input 
               type="number" 
@@ -126,10 +128,12 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               value={maxEdad}
               onChange={(e) => setMaxEdad(parseInt(e.target.value))} 
               min={19}
-              max={100}/>
+              max={100}
+              className={styles.EdadMinMax}
+            />
           </label>
           <p />
-          <Button onClick={handleReset} size='sm'>Reset</Button>
+          <Button onClick={handleReset} size='sm' className={styles.btnReset}>Reset</Button>
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
           <p>Fulltime:</p>
