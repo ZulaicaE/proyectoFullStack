@@ -1,0 +1,52 @@
+.containerAplicar {
+  font-family: 'Ubuntu';
+}
+
+.bodyAplicar {
+  background-color: #e0ffcd;
+}
+
+.headerAplicar {
+  border-bottom: 2px solid slategrey;
+  background-color: #61d2b4;
+}
+
+.btnEnviar {
+  background-color: #0D7377;
+  border: solid 1px black;
+  padding: 6px 16px;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: background-color 0.4s ease;
+}
+
+.btnEnviar:hover {
+  background-color: #084547;
+  border: solid 1px black;
+}
+
+.btnEnviar:active {
+  background-color: #0D7377 !important;
+  border-color: #0D7377 !important;
+}
+
+.inputForm {
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.inputForm:focus {
+  border-color: #0D7377;
+  outline: none;
+}
+
+.inputForm:focus-visible {
+  box-shadow: 0 0 5px rgba(13, 115, 119, 0.8);
+}

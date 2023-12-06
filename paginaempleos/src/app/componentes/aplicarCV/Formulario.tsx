@@ -52,6 +52,7 @@ return (
                         required: 'Este campo es obligatorio.',
                         minLength: { value: 2, message: 'El nombre debe tener al menos 2 caracteres' },
                       })}
+                      className='inputForm'
                     />
                     <Form.Text className="text-danger">{errors.firstName?.message}</Form.Text>
                   </Form.Group>
@@ -61,6 +62,7 @@ return (
                       type="text"
                       placeholder="Ingrese su apellido"
                       {...register('lastName', { required: 'Este campo es obligatorio.' })}
+                      className='inputForm'
                     />
                     <Form.Text className="text-danger">{errors.lastName?.message}</Form.Text>
                   </Form.Group>
@@ -78,6 +80,7 @@ return (
                           message: 'Dirección de correo electrónico no válida',
                         },
                       })}
+                      className='inputForm'
                     />
                     <Form.Text className="text-danger">{errors.email?.message}</Form.Text>
                     <p />
@@ -92,11 +95,12 @@ return (
                           message: 'Ingresa un enlace de perfil de LinkedIn válido',
                         },
                       })}
+                      className='inputForm'
                     />
                     <Form.Text className="text-danger">{errors.url?.message}</Form.Text>
                   </Form.Group>
                   <p />
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className='btnEnviar'>
                   Enviar
                 </Button>
               </Form>
