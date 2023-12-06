@@ -16,7 +16,7 @@ export const Paginado: React.FC<PaginadoProps> = ({
   onPaginaChange,
 }) => {
   return (
-    <Pagination className="d-flex justify-content-center">
+    <Pagination className="d-flex justify-content-center contenedor">
       {Array.from({ length: paginasTotales }).map((_, index) => (
         <Pagination.Item className='botonPaginado'
           key={index + 1}

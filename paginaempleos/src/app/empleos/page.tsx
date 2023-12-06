@@ -19,15 +19,17 @@ export default function EmpleosPage() {
       const screenWidth = window.innerWidth;
       
       if (screenWidth <= 576) {
-        return 1;
-      } else if (screenWidth <= 768) {
-        return 2;
-      } else if (screenWidth <= 1180) {
-        return 3;
-      } else if (screenWidth <= 1366) {
         return 4;
+      } else if (screenWidth <= 768) {
+        return 4;
+      } else if (screenWidth <= 991) {
+        return 6;
+      } else if (screenWidth <= 1199) {
+        return 9;
+      } else if (screenWidth <= 1366) {
+        return 12
       } else {
-        return 6
+        return 16
       }
   }
 
@@ -66,13 +68,13 @@ export default function EmpleosPage() {
       <NavBar />
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
-        <div className={`d-flex flex-row ${styles.containerCol}`}>
-          <div className={`colIzq ${styles.containerFilter}`}>
+        <div className={styles.contenedor}>
+          <div className={styles.colIzq}>
             <div className="pegadizo">
           <FiltroEmpleos cambiosEmpleosFiltrados={manejoEmpleosFiltrados} />
           </div>
           </div>
-          <div className='col-10 '>
+          <div className={styles.colDer}>
             <Jobs empleosFiltrados={cardsActuales} />
             <Paginado
               paginaActual={paginaActual}

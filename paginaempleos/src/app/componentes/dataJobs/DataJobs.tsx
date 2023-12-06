@@ -79,6 +79,96 @@ const dataEmpleos = [
         cargaHoraria: "Full-Time",
         img: "./img/empleos/montaje.png"
     },
+    {
+        id: "9",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "10",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "11",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "12",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "13",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "14",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "15",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "16",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    },
+    {
+        id: "17",
+        empresa: "Skynet",
+        empleo: "Reparación de robots",
+        rubro: "Industrial",
+        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        requisitos: "Mayor de edad",
+        cargaHoraria: "Full-Time",
+        img: "./img/empleos/montaje.png"
+    }
 
 ];
 

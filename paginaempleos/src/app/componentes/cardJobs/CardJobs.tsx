@@ -24,16 +24,16 @@ export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
     const [collapseAbierto, setCollapse] = useState(false);
 
     const botonCollapse = () => {
-        setCollapse (!collapseAbierto); 
+        setCollapse (!collapseAbierto) 
     };
 
     return (
-        <Card className="h-100 cardJobs">
+        <Card className="cardJobs">
             <Card.Img className="jobsImg img-fluid" variant="top" src={empleo.img} />
             <Card.Body>
                 <Card.Title className="tituloCardJobs">{empleo.empleo}</Card.Title>
                 <p><strong>{empleo.empresa}</strong></p>
-                <div className="d-flex justify-content-center botonCV">
+                <div className={collapseAbierto ? "d-flex justify-content-center botonCVnopadd" : "d-flex justify-content-center botonCV"}>
                 
                 </div>
                 <Collapse isOpened={collapseAbierto}>
@@ -46,8 +46,7 @@ export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
                         </Card.Text>
                     </div>
                 </Collapse>
-            </Card.Body>
-            <div className="d-flex justify-content-center botonCV">
+                <div className="d-flex justify-content-center botonCV" >
                 <Button variant="outline-dark" onClick={botonCollapse}>
                     {collapseAbierto ? 'Ocultar Detalles' : 'Mostrar Detalles'}
                 </Button>
@@ -55,6 +54,8 @@ export const CardJobs: React.FC<CardJobsProps> = ({ empleo }) => {
                     Aplicar
                 </Button>
             </div>
+            </Card.Body>
+            
             <PopUp showModal={showModal} empleo={empleo.empleo} onClose={() => setShowModal(false)} />
         </Card>
     );

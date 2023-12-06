@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ListGroup } from "react-bootstrap";
 import DataEmpleos from '../dataJobs/DataJobs';
 import styles from './FiltroJobs.module.css';
 
@@ -54,9 +53,9 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
   };
 
   return (
-    <div>
-      <ListGroup>
-        <ListGroup.Item className={styles.container}>
+    <div className={styles.filtroCont}>
+      
+        <div className={styles.rubro}>
           <p>Rubro:</p>
           <input
             type="text"
@@ -65,10 +64,11 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
             onChange={(e) => filtrarEmpleos(e.target.value,)}
             className={styles.inputBuscar}
           />
-        </ListGroup.Item>
-        <ListGroup.Item className={styles.container}>
+        </div>
+        <hr className={styles.hr}/>
+        <div className={styles.cargHor}>
           <p>Carga Horaria:</p>
-          <label>
+          <label className={`d-flex flex-row ${styles.etiqueta}`}>
             <span> Fulltime </span>
             <input
               type="checkbox"
@@ -76,8 +76,7 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
               onChange={() => handleCheckboxChange('Full-Time')}
             />
           </label>
-          <p />
-          <label>
+          <label className={`d-flex flex-row ${styles.etiqueta}`}>
             <span> Partime </span>
             <input
               type="checkbox"
@@ -85,8 +84,8 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
               onChange={() => handleCheckboxChange('Part-Time')}
             />
           </label>
-        </ListGroup.Item>
-      </ListGroup>
+        </div>
+      
     </div>
   );
 };
