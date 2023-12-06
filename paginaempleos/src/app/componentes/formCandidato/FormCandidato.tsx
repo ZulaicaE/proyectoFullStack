@@ -134,7 +134,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={fulltimeYes}
                                 onChange={() => handleCheckboxChange('Si', 'Si')}
-                                className='fulltimeMovilidadPointer'
+                                className='fulltimeMovilidadPointer form-check-input'
                             />
                             <span className='fulltimeMovilidadPointer'> Si </span>
                         </label>
@@ -144,7 +144,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={fulltimeNo}
                                 onChange={() => handleCheckboxChange('No', 'Si')}
-                                className='fulltimeMovilidadPointer'
+                                className='fulltimeMovilidadPointer form-check-input'
                             />
                             <span className='fulltimeMovilidadPointer'> No </span>
                         </label>
@@ -158,7 +158,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={movilidadYes}
                                 onChange={() => handleCheckboxChange('Si', 'No')}
-                                className='fulltimeMovilidadPointer'
+                                className='fulltimeMovilidadPointer form-check-input'
                             />
                             <span className='fulltimeMovilidadPointer'> Si </span>
                         </label>
@@ -168,7 +168,7 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                                 type="checkbox"
                                 checked={movilidadNo}
                                 onChange={() => handleCheckboxChange('No', 'No')}
-                                className='fulltimeMovilidadPointer'
+                                className='fulltimeMovilidadPointer form-check-input'
                             />
                             <span className='fulltimeMovilidadPointer'> No </span>
                         </label>

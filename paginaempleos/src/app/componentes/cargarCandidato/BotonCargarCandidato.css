@@ -20,8 +20,11 @@
 .offCanvasContainer {
   background-color: #61d2b4;
   font-family: 'Ubuntu';
+  background-color: #e0ffcd;
 }
 
 .offCanvasHeader {
   border-bottom: 2px solid slategrey;
+  background-color: #61d2b4;
+  height: 75px;
 }
