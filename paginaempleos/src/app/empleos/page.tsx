@@ -74,6 +74,11 @@ export default function EmpleosPage() {
               <FiltroEmpleos cambiosEmpleosFiltrados={manejoEmpleosFiltrados} />
             </div>
           </div>
+          {empleosFiltrados.length === 0 ? (
+          <div className={styles.colDer}>
+            <p className={styles.divEmpleos}> No hay empleos que coincidan con las caracteristicas buscadas.</p>
+          </div>
+        ) : (
           <div className={styles.colDer}>
             <Jobs empleosFiltrados={cardsActuales} />
             <Paginado
@@ -82,6 +87,7 @@ export default function EmpleosPage() {
               onPaginaChange={handlePaginaChange}
             />
           </div>
+        )}
         </div>
       </main>
     </>

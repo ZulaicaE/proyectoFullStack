@@ -87,7 +87,7 @@ return (
                     <Form.Label>LinkedIn:</Form.Label>
                     <Form.Control
                       type='url'
-                      placeholder='Ingrese su url'
+                      placeholder='https://www.linkedin.com/in/ejemplo'
                       {...register('url', {
                         required: 'Este campo es obligatorio.',
                         pattern: {

@@ -81,14 +81,20 @@ export default function CandidatosPage() {
               <BotonCargarCandidato onSubmitCandidato={agregarNuevoCandidato} />
             </div>
           </div>
+    {candidatosFiltrados.length === 0 ? (
+          <div className={styles.colDer}>
+            <p className={styles.divCandidatos}> No hay candidatos que coincidan con las caracteristicas buscadas.</p>
+          </div>
+        ) : (
           <div className={styles.colDer}>
             <Employees candidatosFiltrados={cardsActuales} />
             <Paginado
               paginaActual={paginaActual}
               paginasTotales={paginasTotales}
               onPaginaChange={handlePaginaChange}
-            />
+            />  
           </div>
+          )} 
         </div>
       </main>
     </>
