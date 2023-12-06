@@ -68,7 +68,7 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
         <hr className={styles.hr}/>
         <div className={styles.cargHor}>
           <p>Carga Horaria:</p>
-          <label className={`d-flex flex-row ${styles.etiqueta}`}>
+          <label className={`${styles.etiqueta} ${styles.checkBoxContainer}`}>
             <span className={styles.checkBoxHover}> Fulltime </span>
             <input
               type="checkbox"
@@ -78,7 +78,7 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
             />
           </label>
 
-          <label className={`d-flex flex-row ${styles.etiqueta}`}>
+          <label className={`${styles.etiqueta} ${styles.checkBoxContainer}`}>
             <span className={styles.checkBoxHover}> Partime </span>
 
             <input

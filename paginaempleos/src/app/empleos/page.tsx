@@ -16,26 +16,26 @@ export default function EmpleosPage() {
   const [cardsPorPagina, setCardsPorPagina] = useState<number>(calcularCardsPorPagina);
 
   function calcularCardsPorPagina() {
-      const screenWidth = window.innerWidth;
-      
-      if (screenWidth <= 576) {
-        return 4;
-      } else if (screenWidth <= 768) {
-        return 4;
-      } else if (screenWidth <= 991) {
-        return 6;
-      } else if (screenWidth <= 1199) {
-        return 9;
-      } else if (screenWidth <= 1366) {
-        return 12
-      } else {
-        return 16
-      }
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 576) {
+      return 4;
+    } else if (screenWidth <= 768) {
+      return 4;
+    } else if (screenWidth <= 991) {
+      return 6;
+    } else if (screenWidth <= 1199) {
+      return 9;
+    } else if (screenWidth <= 1366) {
+      return 12
+    } else {
+      return 16
+    }
   }
 
   const manejoEmpleosFiltrados = (empleos: any) => {
-      setEmpleosFiltrados(empleos);
-      setPaginaActual(1);
+    setEmpleosFiltrados(empleos);
+    setPaginaActual(1);
   };
 
   useEffect(() => {
@@ -69,10 +69,10 @@ export default function EmpleosPage() {
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
         <div className={styles.contenedor}>
-          <div className={styles.colIzq}>
+          <div>
             <div className="pegadizo">
-          <FiltroEmpleos cambiosEmpleosFiltrados={manejoEmpleosFiltrados} />
-          </div>
+              <FiltroEmpleos cambiosEmpleosFiltrados={manejoEmpleosFiltrados} />
+            </div>
           </div>
           <div className={styles.colDer}>
             <Jobs empleosFiltrados={cardsActuales} />

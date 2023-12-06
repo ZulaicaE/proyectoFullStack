@@ -21,16 +21,6 @@ hr.hr {
   margin: 0;
 }
 
-.inputBuscar {
-  width: 100%;
-  max-width: 100%;
-  padding: 4px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
 .cargHor {
   width: 100%;
   padding: 8px 16px;
@@ -41,6 +31,10 @@ hr.hr {
   border: 1px solid slategray;
   font-family: 'Ubuntu';
   width: 250px;
+}
+
+.checkBoxHover {
+  margin: 0;
 }
 
 .checkBoxHover:hover {
