@@ -62,6 +62,9 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
     const validateEdad = (value: number) => {
         if (value < 18) {
           return 'Debe ser mayor de edad.';
+
+        } else if (value > 9999) {
+            return 'Debe tener menos que 10 milenios.'
         }
         return true;
       };
