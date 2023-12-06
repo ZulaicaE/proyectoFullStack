@@ -6,22 +6,22 @@ const links = [{
     route: '#cardNoticia',
 }, {
     label: 'Salud',
-    route: '',
+    route: 'https://www.salud.unicen.edu.ar/',
 }, {
     label: 'Deportes',
-    route: '',
+    route: 'https://www.olavarria.gov.ar/deportes/',
 },
 {
     label: 'Servicios',
-    route: '',
+    route: 'https://www.olavarria.gov.ar/servicios/servicio-de-recoleccion/',
 },
 {
     label: 'Transporte',
-    route: '',
+    route: 'https://www.olavarria.gov.ar/categoria/transporte/',
 },
 {
     label: 'Turismo',
-    route: '',
+    route: 'https://www.olavarria.gov.ar/Turismo/',
 }]
 
 export const HomeMenu = () => {
