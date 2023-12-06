@@ -14,3 +14,12 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.checkBoxHover:hover {
+  cursor: pointer;
+}
+
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+}

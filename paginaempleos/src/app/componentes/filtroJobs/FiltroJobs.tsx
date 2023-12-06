@@ -68,21 +68,23 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
           <p>Carga Horaria:</p>
-          <label>
-            <span> Fulltime </span>
+          <label className={styles.checkBoxContainer}>
+            <span className={styles.checkBoxHover}> Fulltime </span>
             <input
               type="checkbox"
               checked={fulltime}
               onChange={() => handleCheckboxChange('Full-Time')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
           </label>
           <p />
-          <label>
-            <span> Partime </span>
+          <label className={styles.checkBoxContainer}>
+            <span className={styles.checkBoxHover}> Partime </span>
             <input
               type="checkbox"
               checked={parttime}
               onChange={() => handleCheckboxChange('Part-Time')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
           </label>
         </ListGroup.Item>
