@@ -62,26 +62,30 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
             placeholder="Buscar"
             value={filtroRubro}
             onChange={(e) => filtrarEmpleos(e.target.value,)}
-            className={styles.inputBuscar}
+            className={styles.inputForm}
           />
         </div>
         <hr className={styles.hr}/>
         <div className={styles.cargHor}>
           <p>Carga Horaria:</p>
           <label className={`d-flex flex-row ${styles.etiqueta}`}>
-            <span> Fulltime </span>
+            <span className={styles.checkBoxHover}> Fulltime </span>
             <input
               type="checkbox"
               checked={fulltime}
               onChange={() => handleCheckboxChange('Full-Time')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
           </label>
+
           <label className={`d-flex flex-row ${styles.etiqueta}`}>
-            <span> Partime </span>
+            <span className={styles.checkBoxHover}> Partime </span>
+
             <input
               type="checkbox"
               checked={parttime}
               onChange={() => handleCheckboxChange('Part-Time')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
           </label>
         </div>

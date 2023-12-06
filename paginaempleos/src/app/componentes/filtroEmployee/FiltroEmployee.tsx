@@ -142,8 +142,9 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               type="checkbox"
               checked={fulltimeYes}
               onChange={() => handleCheckboxChange('Si', 'Si')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
-            <span> Si </span>
+            <span className={styles.checkBoxHover}> Si </span>
           </label>
           <p />
           <label>
@@ -151,8 +152,9 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               type="checkbox"
               checked={fulltimeNo}
               onChange={() => handleCheckboxChange('No', 'Si')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
-            <span> No </span>
+            <span className={styles.checkBoxHover}> No </span>
           </label>
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
@@ -162,8 +164,9 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               type="checkbox"
               checked={movilidadYes}
               onChange={() => handleCheckboxChange('Si', 'No')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
-            <span> Si </span>
+            <span className={styles.checkBoxHover}> Si </span>
           </label>
           <p />
           <label>
@@ -171,8 +174,9 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               type="checkbox"
               checked={movilidadNo}
               onChange={() => handleCheckboxChange('No', 'No')}
+              className={`form-check-input ${styles.checkBoxHover}`}
             />
-            <span> No </span>
+            <span className={styles.checkBoxHover}> No </span>
           </label>
         </ListGroup.Item>
       </ListGroup>

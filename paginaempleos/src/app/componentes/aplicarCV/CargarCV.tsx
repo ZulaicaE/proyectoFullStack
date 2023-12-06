@@ -43,11 +43,13 @@ return (
                   <Form.Label>Seleccionar Archivo PDF</Form.Label>
                   <Form.Control type="file" accept='.pdf' {...register('pdfFile',  {
                       required: 'Este campo es obligatorio.',
-                    })} />
+                    })}
+                    className='inputForm'
+                  />
                     <Form.Text className="text-danger">{errors.pdfFile?.message}</Form.Text>
                 </Form.Group>
                 <p />
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className='btnEnviar'>
                   Enviar
                 </Button>
             </Form>
