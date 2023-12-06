@@ -113,7 +113,7 @@ main {
 }
 @media(max-width: 1366px){
   .pegadizo{
-    padding: 0;
+    padding-bottom: 1vw;
   }
 }
 @media (min-width: 1200px){

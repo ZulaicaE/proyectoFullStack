@@ -1,14 +1,15 @@
 .divFiltro {
-  padding-bottom: 8px;
-}
-
-.container {
-  background-color: #61d2b4;
-  border: 1px solid slategray;
   font-family: 'Ubuntu';
-  width: 250px;
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid slategray;
+  background-color: #61d2b4;
 }
-
+.divFiltro p{
+  margin: 0px 0px 16px;
+}
 .inputBuscar {
   width: 100%;
   max-width: 100%;
@@ -20,6 +21,51 @@
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
+.name{
+    width: 100%;
+    padding: 8px 16px;
+  
+}
+hr.hr {
+  margin: 0;
+}
+.checkBoxHover {
+  margin: 0;
+}
+
+.checkBoxHover:hover {
+  cursor: pointer;
+}
+
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+}
+.age{
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.inputForm {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 16px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.inputForm:focus {
+  border-color: #0D7377;
+  outline: none;
+}
+
+.inputForm:focus-visible {
+  box-shadow: 0 0 5px rgba(13, 115, 119, 0.8);
+}
+
 .inputBuscar:focus {
   border-color: #0D7377;
   outline: none;
@@ -28,8 +74,51 @@
 .inputBuscar:focus-visible {
   box-shadow: 0 0 5px rgba(13, 115, 119, 0.8);
 }
+.EdadMinMax {
+  
+  max-width: 90%;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.mov{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  padding: 8px 16px;
+  width: 100%;
+}
+.mov p{
+  margin: 0;
+}
+.mov label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.cargHor{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+  padding: 8px 16px;
+  width: 100%;
+}
+.cargHor p{
+  margin: 0;
+}
+.cargHor label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
 
-.EdadMinMaxContainer{
+/*.EdadMinMaxContainer{
   width: 100%;
 }
 
@@ -42,7 +131,6 @@
   width: 100%;
   max-width: 100%;
   padding: 4px;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -62,7 +150,7 @@
   display: flex;
   align-items: center;
   padding-right: 10px;
-}
+}*/
 
 .btnReset {
   background-color: #0D7377;
@@ -72,6 +160,7 @@
   font-weight: 800;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: background-color 0.4s ease;
+  margin-left: 2vw;
 }
 
 .btnReset:hover {
@@ -84,26 +173,139 @@
   border-color: #0D7377!important;
 }
 
-.checkBoxHover:hover {
-  cursor: pointer;
+@media(max-width: 1366px) {
+
+  .divFiltro {
+    flex-direction: row;
+    width: 75vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .divFiltro p {
+    font-size: 1vw;
+    width: 40%;
+    margin: 0;
+  }
+ .EdadMinMaxContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  margin-left: .5vw;
+ }
+ .EdadMinMaxContainer span{
+  display: none;
+ }
+ 
+ .inputBuscar{
+  margin-left: .5vw;
+  font-size: 1vw;
+ }
+  
+  .btnReset{
+    margin-left: .5vw;
+    font-size: 1vw;
+    padding: .5vh 1vw;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    padding: 0.5vw 1vh;
+
+  }
+  .name p {
+    min-width: 40%;
+  }
+  .name input{
+    width: 60%;
+  }
+
+  .age {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    padding: 0.5vw 1vh;
+
+  }
+  .age p{
+    width: 100%;
+  }
+  .mov{
+    width: 15%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .mov label{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .mov label span{
+    font-size: 1vw;
+    margin-left: .4vw;
+  }
+  .cargHor{
+  width: 15%;
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cargHor label{
+  display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.cargHor label span{
+  
+  font-size: 1vw;
+  
+}
 }
 
-.inputForm {
-  width: 100%;
-  max-width: 100%;
-  padding: 4px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-}
+@media(max-width: 768px) {
+  .checkBoxHover {
+    width: 1vw;
+    height: 1vw;
+  }
+  
+  .mov label{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .mov label span{
+    font-size: 1vw;
+    margin-left: .4vw;
+    width: 25%;
+  }
 
-.inputForm:focus {
-  border-color: #0D7377;
-  outline: none;
+.cargHor label{
+  display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
-
-.inputForm:focus-visible {
-  box-shadow: 0 0 5px rgba(13, 115, 119, 0.8);
+.cargHor label span{
+  
+  font-size: 1vw;
+  width: 25%;
+  
+}
 }

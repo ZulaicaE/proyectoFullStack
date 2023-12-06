@@ -7,15 +7,10 @@
     padding-right: 96px;
     padding-top: 25px;
     padding-bottom: 25px;
-    
-    
     background-color: #e0ffcd;
   }
 
-  
-
-  
-  .contenedor{
+ .contenedor{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -31,7 +26,6 @@
   .colDer{
     width: 75vw;
     margin-right: 5vw;
-    margin: 1vh 1w;
     
   }
   @media(max-width: 1366px) {
