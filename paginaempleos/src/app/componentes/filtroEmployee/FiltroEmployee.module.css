@@ -81,3 +81,7 @@
   background-color: #0D7377!important;
   border-color: #0D7377!important;
 }
+
+.checkBoxHover:hover {
+  cursor: pointer;
+}
