@@ -63,7 +63,7 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
             placeholder="Buscar"
             value={filtroRubro}
             onChange={(e) => filtrarEmpleos(e.target.value,)}
-            className={styles.inputBuscar}
+            className={styles.inputForm}
           />
         </ListGroup.Item>
         <ListGroup.Item className={styles.container}>
