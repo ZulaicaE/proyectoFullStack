@@ -1,3 +1,11 @@
+.tituloFiltro {
+  margin: 0;
+}
+
+.name p {
+  margin-bottom: 10px;
+}
+
 .divFiltro {
   font-family: 'Ubuntu';
   width: 100%;
@@ -7,9 +15,7 @@
   border: 1px solid slategray;
   background-color: #61d2b4;
 }
-.divFiltro p{
-  margin: 0px 0px 16px;
-}
+
 .inputBuscar {
   width: 100%;
   max-width: 100%;
@@ -21,14 +27,16 @@
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
-.name{
-    width: 100%;
-    padding: 8px 16px;
-  
+.name {
+  width: 100%;
+  padding: 8px 16px;
+
 }
+
 hr.hr {
   margin: 0;
 }
+
 .checkBoxHover {
   margin: 0;
 }
@@ -37,11 +45,7 @@ hr.hr {
   cursor: pointer;
 }
 
-.checkBoxContainer {
-  display: flex;
-  align-items: center;
-}
-.age{
+.age {
   width: 100%;
   padding: 8px 16px;
 }
@@ -74,8 +78,8 @@ hr.hr {
 .inputBuscar:focus-visible {
   box-shadow: 0 0 5px rgba(13, 115, 119, 0.8);
 }
+
 .EdadMinMax {
-  
   max-width: 90%;
   padding: 8px 16px;
   border: 1px solid #ccc;
@@ -83,48 +87,51 @@ hr.hr {
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
-.mov{
+
+.mov {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
   padding: 8px 16px;
   width: 100%;
-}
-.mov p{
-  margin: 0;
-}
-.mov label{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  
-}
-.cargHor{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
- 
-  padding: 8px 16px;
-  width: 100%;
-}
-.cargHor p{
-  margin: 0;
-}
-.cargHor label{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  
 }
 
-/*.EdadMinMaxContainer{
+.mov p {
+  margin: 0;
+}
+
+.mov label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cargHor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.cargHor p {
+  margin: 0;
+}
+
+.cargHor label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.EdadMinMaxContainer {
   width: 100%;
 }
 
 .EdadMinMax::-webkit-inner-spin-button,
 .EdadMinMax::-webkit-outer-spin-button {
-  -webkit-appearance: none;  
+  -webkit-appearance: none;
 }
 
 .EdadMinMax {
@@ -150,7 +157,7 @@ hr.hr {
   display: flex;
   align-items: center;
   padding-right: 10px;
-}*/
+}
 
 .btnReset {
   background-color: #0D7377;
@@ -160,7 +167,7 @@ hr.hr {
   font-weight: 800;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: background-color 0.4s ease;
-  margin-left: 2vw;
+  margin-top: 6px;
 }
 
 .btnReset:hover {
@@ -169,8 +176,8 @@ hr.hr {
 }
 
 .btnReset:active {
-  background-color: #0D7377!important;
-  border-color: #0D7377!important;
+  background-color: #0D7377 !important;
+  border-color: #0D7377 !important;
 }
 
 @media(max-width: 1366px) {
@@ -189,24 +196,26 @@ hr.hr {
     width: 40%;
     margin: 0;
   }
- .EdadMinMaxContainer{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 1vw;
-  margin-left: .5vw;
- }
- .EdadMinMaxContainer span{
-  display: none;
- }
- 
- .inputBuscar{
-  margin-left: .5vw;
-  font-size: 1vw;
- }
-  
-  .btnReset{
+
+  .EdadMinMaxContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    margin-left: .5vw;
+  }
+
+  .EdadMinMaxContainer span {
+    display: none;
+  }
+
+  .inputBuscar {
+    margin-left: .5vw;
+    font-size: 1vw;
+  }
+
+  .btnReset {
     margin-left: .5vw;
     font-size: 1vw;
     padding: .5vh 1vw;
@@ -221,10 +230,12 @@ hr.hr {
     padding: 0.5vw 1vh;
 
   }
+
   .name p {
     min-width: 40%;
   }
-  .name input{
+
+  .name input {
     width: 60%;
   }
 
@@ -237,43 +248,50 @@ hr.hr {
     padding: 0.5vw 1vh;
 
   }
-  .age p{
+
+  .age p {
     width: 100%;
   }
-  .mov{
+
+  .mov {
     width: 15%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  .mov label{
+
+  .mov label {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
   }
-  .mov label span{
+
+  .mov label span {
     font-size: 1vw;
     margin-left: .4vw;
   }
-  .cargHor{
-  width: 15%;
-  display: flex;
+
+  .cargHor {
+    width: 15%;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.cargHor label{
-  display: flex;
+  }
+
+  .cargHor label {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-}
-.cargHor label span{
-  
-  font-size: 1vw;
-  
-}
+  }
+
+  .cargHor label span {
+
+    font-size: 1vw;
+
+  }
 }
 
 @media(max-width: 768px) {
@@ -281,31 +299,33 @@ hr.hr {
     width: 1vw;
     height: 1vw;
   }
-  
-  .mov label{
+
+  .mov label {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     width: 50%;
   }
-  .mov label span{
+
+  .mov label span {
     font-size: 1vw;
     margin-left: .4vw;
     width: 25%;
   }
 
-.cargHor label{
-  display: flex;
+  .cargHor label {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     width: 50%;
-}
-.cargHor label span{
-  
-  font-size: 1vw;
-  width: 25%;
-  
-}
+  }
+
+  .cargHor label span {
+
+    font-size: 1vw;
+    width: 25%;
+
+  }
 }
