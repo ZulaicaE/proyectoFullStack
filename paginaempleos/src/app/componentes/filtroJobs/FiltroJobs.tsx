@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DataEmpleos from '../dataJobs/DataJobs';
 import styles from './FiltroJobs.module.css';
-import { Typeahead } from 'react-bootstrap-typeahead';
 
 
 interface FiltroEmpleosProps {
@@ -9,31 +8,24 @@ interface FiltroEmpleosProps {
 }
 
 export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFiltrados }) => {
-  const rubros = ['Comercio', 'Delivery', 'Industrial', 'Investigacion', 'Periodismo', 'Salud'];
-  const [rubroSeleccionado, setRubroSeleccionado] = useState<string | null>(null);
-  const [rubroOpciones, setRubroOpciones] = useState<string[]>(rubros);
+  const [filtroRubro, setFiltroRubro] = useState<string>('');
+
   const [fulltime, setFulltime] = useState<boolean>(false);
   const [parttime, setParttime] = useState<boolean>(false);
 
-  const handleRubroChange = (seleccionado: any[]) => {
-    setRubroSeleccionado(seleccionado.length > 0 ? seleccionado[0] : null);
-  };
-
-  const handleBusqueda = (query: string) => {
-    const opcionesFiltradas = rubros.filter((rubro) =>
-      rubro.toLowerCase().startsWith(query.toLowerCase())
-    );
-    setRubroOpciones(opcionesFiltradas);
+  const filtrarEmpleos = (filtradoRubro: string) => {
+    setFiltroRubro(filtradoRubro);
   };
 
   useEffect(() => {
-    if (rubroSeleccionado) {
-      const updatedFilteredCards = DataEmpleos.filter((empleos) => empleos.rubro === rubroSeleccionado);
-      cambiosEmpleosFiltrados(updatedFilteredCards);
-    } else {
-      cambiosEmpleosFiltrados(DataEmpleos);
-    }
-  }, [rubroSeleccionado]);
+    const empleosFiltrados = DataEmpleos.filter((empleo: any) => {
+      return (
+        empleo.rubro.toLowerCase().startsWith(filtroRubro.toLowerCase())
+      );
+    });
+
+    cambiosEmpleosFiltrados(empleosFiltrados);
+  }, [filtroRubro]);
 
   useEffect(() => {
     const empleosFiltrados = DataEmpleos.filter((empleo : any) => {
@@ -65,14 +57,12 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
       
         <div className={styles.rubro}>
           <p>Rubro:</p>
-          <Typeahead
-            className={styles.index}
-            id="categoryTypeahead"
-            onChange={handleRubroChange}
-            onInputChange={handleBusqueda}
-            options={rubroOpciones}
-            selected={rubroSeleccionado ? [rubroSeleccionado] : []}
-            placeholder="Busca o selecciona aqui"
+          <input
+            type="text"
+            placeholder="Buscar"
+            value={filtroRubro}
+            onChange={(e) => filtrarEmpleos(e.target.value,)}
+            className={styles.inputForm}
           />
         </div>
         <hr className={styles.hr}/>
