@@ -29,7 +29,7 @@ export default function EmpleosPage() {
     } else if (screenWidth <= 1366) {
       return 12
     } else {
-      return 16
+      return 12
     }
   }
 
