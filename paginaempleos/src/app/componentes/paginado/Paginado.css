@@ -1,8 +1,11 @@
+.contenedor{
+  margin-top: 1vh;
+}
 .botonPaginado span {
   background-color: #61d2b4!important;
   border: solid #0D7377 1px!important;
   color: white!important;
-  font-size: larger;
+  font-size: 1.8vw;
   font-weight: bolder;
 }
 
@@ -10,7 +13,7 @@
   background-color: white!important;
   border: solid #0D7377 1px!important;
   color: #61d2b4!important;
-  font-size: larger;
+  font-size: 1.5vw;
   font-weight: bolder;
 }
 

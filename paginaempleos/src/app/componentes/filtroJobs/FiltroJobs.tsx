@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ListGroup } from "react-bootstrap";
 import DataEmpleos from '../dataJobs/DataJobs';
 import styles from './FiltroJobs.module.css';
 
@@ -54,9 +53,9 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
   };
 
   return (
-    <div>
-      <ListGroup>
-        <ListGroup.Item className={styles.container}>
+    <div className={styles.filtroCont}>
+      
+        <div className={styles.rubro}>
           <p>Rubro:</p>
           <input
             type="text"
@@ -65,10 +64,11 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
             onChange={(e) => filtrarEmpleos(e.target.value,)}
             className={styles.inputForm}
           />
-        </ListGroup.Item>
-        <ListGroup.Item className={styles.container}>
+        </div>
+        <hr className={styles.hr}/>
+        <div className={styles.cargHor}>
           <p>Carga Horaria:</p>
-          <label className={styles.checkBoxContainer}>
+          <label className={`d-flex flex-row ${styles.etiqueta}`}>
             <span className={styles.checkBoxHover}> Fulltime </span>
             <input
               type="checkbox"
@@ -77,9 +77,10 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
               className={`form-check-input ${styles.checkBoxHover}`}
             />
           </label>
-          <p />
-          <label className={styles.checkBoxContainer}>
+
+          <label className={`d-flex flex-row ${styles.etiqueta}`}>
             <span className={styles.checkBoxHover}> Partime </span>
+
             <input
               type="checkbox"
               checked={parttime}
@@ -87,8 +88,8 @@ export const FiltroEmpleos: React.FC<FiltroEmpleosProps> = ({ cambiosEmpleosFilt
               className={`form-check-input ${styles.checkBoxHover}`}
             />
           </label>
-        </ListGroup.Item>
-      </ListGroup>
+        </div>
+      
     </div>
   );
 };

@@ -21,7 +21,7 @@ interface Candidato {
 export const Jobs: React.FC<EmpleosFiltradosProps> = ({empleosFiltrados}) => {
     return (
         <div className={styles.divEmpleos}>
-            <Row xs={1} md={2} lg={2} xl={4} className="g-4">
+            <Row xs={2} md={2} lg={3} xl={4} className="g-4">
                 {empleosFiltrados.map((empleo, index) => (
                     <Col key={index}>
                         <CardJobs empleo={empleo} />

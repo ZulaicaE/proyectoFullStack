@@ -4,8 +4,10 @@
     font-size: 21px;
     font-weight: 500;
     background-color: #61d2b4;
-    margin: 10px;
+    margin: 0;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid slategray;
+    justify-content: center;
+    align-items: center;
 }
