@@ -193,7 +193,6 @@ hr.hr {
 
   .divFiltro p {
     font-size: 1vw;
-    width: 40%;
     margin: 0;
   }
 
@@ -288,16 +287,13 @@ hr.hr {
   }
 
   .cargHor label span {
-
     font-size: 1vw;
-
   }
 }
 
-@media(max-width: 768px) {
-  .checkBoxHover {
-    width: 1vw;
-    height: 1vw;
+@media(max-width: 1366px) {
+  .divFiltro {
+    height: 8vh;
   }
 
   .mov label {
@@ -305,13 +301,11 @@ hr.hr {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    width: 50%;
   }
 
   .mov label span {
     font-size: 1vw;
     margin-left: .4vw;
-    width: 25%;
   }
 
   .cargHor label {
@@ -319,13 +313,18 @@ hr.hr {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    width: 50%;
   }
 
   .cargHor label span {
-
     font-size: 1vw;
-    width: 25%;
+  }
 
+  .cargHor {
+    display: flex;
+  }
+
+  .btnReset {
+    margin-top: 0px;
+    margin-left: 4px;
   }
 }
