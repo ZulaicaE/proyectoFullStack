@@ -34,7 +34,7 @@ const dataEmpleos = [
         empresa: "Slurm Company",
         empleo: "Repositor",
         rubro: "Comercio",
-        descripcion: "Podés ser parte da Slurm, la marca mas famosa de refrescos de la Vía Láctea, necesitamos gente con compromiso y un toque de adictividad.",
+        descripcion: "Podés ser parte de Slurm, la marca mas famosa de refrescos de la Vía Láctea, necesitamos gente con compromiso y un toque de adictividad.",
         requisitos: "Mayor de edad",
         cargaHoraria: "Full-Time",
         img: "./img/empleos/slurm7.png"
@@ -75,99 +75,99 @@ const dataEmpleos = [
         empleo: "Reparación de robots",
         rubro: "Industrial",
         descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
-        requisitos: "Mayor de edad",
+        requisitos: "Mayor de edad, no-humano",
         cargaHoraria: "Full-Time",
         img: "./img/empleos/montaje.png"
     },
     {
         id: "9",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
-        requisitos: "Mayor de edad",
+        empresa: "Panucci's Pizza",
+        empleo: "Cocinero",
+        rubro: "Gastronomía",
+        descripcion: "Panucci busca cocinero especialista en pizzas!! Consúltenos para más información.",
+        requisitos: "Mayor de edad, 2 años de experiencia",
         cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        img: "./img/empleos/delivery.png"
     },
     {
         id: "10",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        empresa: "Rockstar Games",
+        empleo: "Testeador de juegos de realidad virtuales",
+        rubro: "Tecnología",
+        descripcion: "Buscamos testeadores de juegos con capacidad para producir bugs.",
         requisitos: "Mayor de edad",
-        cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        cargaHoraria: "Part-Time",
+        img: "./img/empleos/fryVR.JPEG"
     },
     {
         id: "11",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
-        requisitos: "Mayor de edad",
-        cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        empresa: "30th Century Fox",
+        empleo: "Doble de riesgo",
+        rubro: "Cinematográfico",
+        descripcion: "Se busca doble de riesgo, con experiencia en esquivar disparos láser.",
+        requisitos: "Mayor de edad, humano",
+        cargaHoraria: "Part-Time",
+        img: "./img/empleos/dobleAccion.jpg"
     },
     {
         id: "12",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        empresa: "Teatro marciano",
+        empleo: "Actor principal",
+        rubro: "Dramaturgia",
+        descripcion: "Buscamos actor con experiencia en obras espaciales.",
         requisitos: "Mayor de edad",
         cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        img: "./img/empleos/actorTeatro.png"
     },
     {
         id: "13",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        empresa: "Planet Express",
+        empleo: "Extractor de miel",
+        rubro: "Apicultura",
+        descripcion: "Se busca personal para extraer miel de abejas inofensivas :)",
         requisitos: "Mayor de edad",
-        cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        cargaHoraria: "Part-Time",
+        img: "./img/empleos/miel.png"
     },
     {
         id: "14",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
-        requisitos: "Mayor de edad",
+        empresa: "Orbiting Meadows",
+        empleo: "Cavador de tumbas",
+        rubro: "Funerario",
+        descripcion: "Necesitamos palero que no cave demasiado profundo.",
+        requisitos: "Mayor de edad, una pala.",
         cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        img: "./img/empleos/cementerio.png"
     },
     {
         id: "15",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
-        requisitos: "Mayor de edad",
+        empresa: "GalacticCheff",
+        empleo: "Concursantes",
+        rubro: "Reality show",
+        descripcion: "Se busca cocineros que quieran participar del reality show mas famoso de la galaxia.",
+        requisitos: "Mayor de edad, saber cocinar.",
         cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        img: "./img/empleos/cocinaTorta.png"
     },
     {
         id: "16",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
-        requisitos: "Mayor de edad",
-        cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        empresa: "MOM'S Friendly Robot Company",
+        empleo: "Señalador de gráficos",
+        rubro: "Oficinista",
+        descripcion: "Buscamos personal para señalar gráficos, traiga su propio señalador.",
+        requisitos: "Mayor de edad, no ser un robot.",
+        cargaHoraria: "Part-Time",
+        img: "./img/empleos/analistaGrafico.png"
     },
     {
         id: "17",
-        empresa: "Skynet",
-        empleo: "Reparación de robots",
-        rubro: "Industrial",
-        descripcion: "Robot Arms busca operador/a de planta para distintos sectores de nuestra línea de reparación.",
+        empresa: "Particular",
+        empleo: "Niñera",
+        rubro: "Domestico",
+        descripcion: "Busco niñera con mucha energía, capaz de entender el idioma Amphibiosan.",
         requisitos: "Mayor de edad",
-        cargaHoraria: "Full-Time",
-        img: "./img/empleos/montaje.png"
+        cargaHoraria: "Part-Time",
+        img: "./img/empleos/niniera.png"
     }
 
 ];
