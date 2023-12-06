@@ -19,11 +19,11 @@ interface CardEmployeeProps {
 
 export const CardEmployee: React.FC<CardEmployeeProps> = ({ candidato }) => {
     return (
-        <Card  className='h-100 d-flex flex-column cardEmployee'>
-            <div className='d-flex justify-content-center'>
+        <Card  className='cardEmployee'>
+            <div className='d-flex justify-content-center employeeImg'>
              <Image src={candidato.img} roundedCircle fluid className='imgCardEmployee' />
             </div>            
-            <Card.Body className='d-flex flex-column justify-content-between'>
+            <Card.Body>
                 <Card.Title className='tituloCardEmployee'>{candidato.nombre} {candidato.apellido}</Card.Title>
                 <p><strong>{candidato.puesto}</strong></p>
                 <Card.Text>

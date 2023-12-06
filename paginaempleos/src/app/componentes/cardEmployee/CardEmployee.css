@@ -1,23 +1,121 @@
 .cardEmployee {
-  background-color: #e0ffcd;
+  background-color: #0D7377;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 0;
+  width: 15vw;
+  height: 90%;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.employeeImg {
+  width: 100%;
+  height: 50%;
 }
 
 .imgCardEmployee {
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 80%;
   object-fit: cover;
   margin-top: 10px;
 }
 
 .tituloCardEmployee {
-  font-size: larger;
+  font-size: 1vw;
+}
+
+p {
+  font-size: .9vw;
+  margin-bottom: 2%;
 }
 
 .cardTextInfo {
-  font-size: 18px;
+  font-size: .7vw;
 }
 
 u {
-  font-size: 20px;
+  font-size: .8vw;
+}
+
+.col {
+  padding: 0;
+}
+
+@media(max-width: 1199px) {
+  .cardEmployee {
+    width: 20vw;
+  }
+
+  .tituloCardEmployee {
+    font-size: 1.3vw;
+  }
+
+  .cardEmployee p {
+    font-size: 1.2vw;
+  }
+
+  u {
+    font-size: 1vw;
+  }
+
+  span {
+    font-size: .9vw;
+  }
+
+  /*.botonCVnopadd{
+      padding: 0;
+  }*/
+}
+
+@media(max-width: 991px) {
+  .cardEmployee {
+    width: 30vw;
+  }
+
+  .tituloCardEmployee {
+    font-size: 1.8vw;
+  }
+
+  .cardEmployee p {
+    font-size: 1.6vw;
+  }
+
+  u {
+    font-size: 1.4vw;
+  }
+
+  .cardTextInfo {
+    font-size: 1.2vw;
+  }
+
+  /*.botonCV button{
+      font-size: 1.5vw ;
+  }
+  .botonCVnopadd{
+      padding: 0;
+  }*/
+}
+
+@media(max-width: 768px) {
+  .cardEmployee {
+    width: 40vw;
+  }
+  .tituloCardEmployee {
+    font-size: 2vw;
+  }
+
+  .cardEmployee p {
+    font-size: 1.8vw;
+  }
+
+  u {
+    font-size: 1.6vw;
+  }
+
+  .cardTextInfo {
+    font-size: 1.4vw;
+  }
 }

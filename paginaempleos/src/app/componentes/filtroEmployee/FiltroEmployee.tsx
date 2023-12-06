@@ -94,8 +94,8 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
 
   return (
     <div className={styles.divFiltro}>
-      <ListGroup>
-        <ListGroup.Item className={styles.container}>
+      
+        <div className={styles.name}>
           <p>Nombre y apellido:</p>
           <input
             type="text"
@@ -104,8 +104,9 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             onChange={(e) => filtrarCandidatos(e.target.value)}
             className={styles.inputBuscar}
           />
-        </ListGroup.Item>
-        <ListGroup.Item className={styles.container}>
+        </div>
+        <hr className={styles.hr}/>
+        <div className={styles.age}>
           <p>Edad:</p>
           <label className={styles.EdadMinMaxContainer}>
             <span> Min </span>
@@ -119,7 +120,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               className={styles.EdadMinMax}
             />
           </label>
-          <p />
+          
           <label className={styles.EdadMinMaxContainer}>
             <span> Max </span>
             <input 
@@ -132,10 +133,11 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
               className={styles.EdadMinMax}
             />
           </label>
-          <p />
+          
           <Button onClick={handleReset} size='sm' className={styles.btnReset}>Reset</Button>
-        </ListGroup.Item>
-        <ListGroup.Item className={styles.container}>
+        </div>
+        <hr className={styles.hr}/>
+        <div className={`${styles.cargHor} ${styles.checkBoxContainer}`}>
           <p>Fulltime:</p>
           <label>
             <input
@@ -146,7 +148,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             />
             <span className={styles.checkBoxHover}> Si </span>
           </label>
-          <p />
+          
           <label>
             <input
               type="checkbox"
@@ -156,8 +158,9 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             />
             <span className={styles.checkBoxHover}> No </span>
           </label>
-        </ListGroup.Item>
-        <ListGroup.Item className={styles.container}>
+        </div>
+        <hr className={styles.hr}/>
+        <div className={`${styles.mov} ${styles.checkBoxContainer}`}>
           <p>Movilidad:</p>
           <label>
             <input
@@ -168,7 +171,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             />
             <span className={styles.checkBoxHover}> Si </span>
           </label>
-          <p />
+          
           <label>
             <input
               type="checkbox"
@@ -178,8 +181,8 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             />
             <span className={styles.checkBoxHover}> No </span>
           </label>
-        </ListGroup.Item>
-      </ListGroup>
-    </div>
+        </div>
+      </div>
+    
   );
 };

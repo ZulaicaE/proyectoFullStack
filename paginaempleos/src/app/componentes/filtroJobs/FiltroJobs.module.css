@@ -26,12 +26,7 @@ hr.hr {
   padding: 8px 16px;
 }
 
-.container {
-  background-color: #61d2b4;
-  border: 1px solid slategray;
-  font-family: 'Ubuntu';
-  width: 250px;
-}
+
 
 .checkBoxHover {
   margin: 0;

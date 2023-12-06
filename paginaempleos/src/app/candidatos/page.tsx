@@ -19,15 +19,17 @@ export default function CandidatosPage() {
     const screenWidth = window.innerWidth;
 
     if (screenWidth <= 576) {
-      return 1;
-    } else if (screenWidth <= 768) {
-      return 2;
-    } else if (screenWidth <= 1180) {
-      return 3;
-    } else if (screenWidth <= 1366) {
       return 4;
+    } else if (screenWidth <= 768) {
+      return 4;
+    } else if (screenWidth <= 991) {
+      return 6;
+    } else if (screenWidth <= 1199) {
+      return 9;
+    } else if (screenWidth <= 1366) {
+      return 12
     } else {
-      return 6
+      return 12
     }
   }
 
@@ -72,19 +74,19 @@ export default function CandidatosPage() {
       <NavBar />
       <main className={styles.main}>
         <TituloPrincipal titulo={titulo} />
-        <div className={`d-flex flex-row ${styles.containerCol}`}>
-          <div className={`colIzq ${styles.containerFilter}`}>
+        <div className={styles.containerCol}>
+          <div className={styles.colIzq}>
             <div className='pegadizo'>
               <FiltroEmployee cambiosCandidatosFiltrados={manejoCandidatosFiltrados} />
               <BotonCargarCandidato onSubmitCandidato={agregarNuevoCandidato} />
             </div>
           </div>
-          {candidatosFiltrados.length === 0 ? (
-          <div className='col-10'>
+    {candidatosFiltrados.length === 0 ? (
+          <div className={styles.colDer}>
             <p className={styles.divCandidatos}> No hay candidatos que coincidan con las caracteristicas buscadas.</p>
           </div>
         ) : (
-          <div className='col-10'>
+          <div className={styles.colDer}>
             <Employees candidatosFiltrados={cardsActuales} />
             <Paginado
               paginaActual={paginaActual}
