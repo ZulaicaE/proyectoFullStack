@@ -12,6 +12,10 @@
   margin: 0px 0px 16px;
 }
 
+.index {
+  z-index: 9999999999;
+}
+
 .rubro {
   width: 100%;
   padding: 8px 16px;
