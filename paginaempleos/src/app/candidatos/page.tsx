@@ -16,22 +16,27 @@ export default function CandidatosPage() {
   const [cardsPorPagina, setCardsPorPagina] = useState<number>(calcularCardsPorPagina);
 
   function calcularCardsPorPagina() {
-    const screenWidth = window.innerWidth;
+    if (typeof window !== 'undefined') {
+      const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 576) {
-      return 4;
-    } else if (screenWidth <= 768) {
-      return 4;
-    } else if (screenWidth <= 991) {
-      return 6;
-    } else if (screenWidth <= 1199) {
-      return 9;
-    } else if (screenWidth <= 1366) {
-      return 12
+      if (screenWidth <= 576) {
+        return 4;
+      } else if (screenWidth <= 768) {
+        return 4;
+      } else if (screenWidth <= 991) {
+        return 6;
+      } else if (screenWidth <= 1199) {
+        return 9;
+      } else if (screenWidth <= 1366) {
+        return 12;
+      } else {
+        return 12;
+      }
     } else {
-      return 12
+      return 12;
     }
   }
+
 
   const manejoCandidatosFiltrados = (candidatos: any) => {
     setCandidatosFiltrados(candidatos);
@@ -43,7 +48,7 @@ export default function CandidatosPage() {
     nuevosCandidatos.unshift(nuevoCandidato);
     setCandidatosFiltrados(nuevosCandidatos);
   };
-  
+
   useEffect(() => {
     function handleResize() {
       setCardsPorPagina(calcularCardsPorPagina());
@@ -81,20 +86,20 @@ export default function CandidatosPage() {
               <BotonCargarCandidato onSubmitCandidato={agregarNuevoCandidato} />
             </div>
           </div>
-    {candidatosFiltrados.length === 0 ? (
-          <div className={styles.colDer}>
-            <p className={styles.divCandidatos}> No hay candidatos que coincidan con las caracteristicas buscadas.</p>
-          </div>
-        ) : (
-          <div className={styles.colDer}>
-            <Employees candidatosFiltrados={cardsActuales} />
-            <Paginado
-              paginaActual={paginaActual}
-              paginasTotales={paginasTotales}
-              onPaginaChange={handlePaginaChange}
-            />  
-          </div>
-          )} 
+          {candidatosFiltrados.length === 0 ? (
+            <div className={styles.colDer}>
+              <p className={styles.divCandidatos}> No hay candidatos que coincidan con las caracteristicas buscadas.</p>
+            </div>
+          ) : (
+            <div className={styles.colDer}>
+              <Employees candidatosFiltrados={cardsActuales} />
+              <Paginado
+                paginaActual={paginaActual}
+                paginasTotales={paginasTotales}
+                onPaginaChange={handlePaginaChange}
+              />
+            </div>
+          )}
         </div>
       </main>
     </>
