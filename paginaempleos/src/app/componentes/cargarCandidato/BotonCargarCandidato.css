@@ -5,6 +5,7 @@
   font-family: 'Ubuntu';
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: background-color 0.4s ease;
+  margin-top: 6px;
 }
 
 .btnCargar:hover {
@@ -13,8 +14,8 @@
 }
 
 .btnCargar:active {
-  background-color: #0D7377!important;
-  border-color: #0D7377!important;
+  background-color: #0D7377 !important;
+  border-color: #0D7377 !important;
 }
 
 .offCanvasContainer {

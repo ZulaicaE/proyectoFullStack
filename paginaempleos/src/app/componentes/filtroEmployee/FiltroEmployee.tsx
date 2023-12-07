@@ -94,7 +94,6 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
 
   return (
     <div className={styles.divFiltro}>
-
       <div className={styles.name}>
         <p>Nombre y apellido:</p>
         <input
@@ -107,7 +106,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
       </div>
       <hr className={styles.hr} />
       <div className={styles.age}>
-        <p>Edad:</p>
+        <p className={styles.tituloFiltro}>Edad:</p>
         <label className={styles.EdadMinMaxContainer}>
           <span> Min </span>
           <input
@@ -116,28 +115,26 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
             value={minEdad}
             onChange={(e) => setMinEdad(parseInt(e.target.value))}
             min={18}
-            max={99}
+            max={9998}
             className={styles.EdadMinMax}
           />
         </label>
-
         <label className={styles.EdadMinMaxContainer}>
           <span> Max </span>
           <input
             type="number"
-            placeholder='Max. 100'
+            placeholder='Max. 9999'
             value={maxEdad}
             onChange={(e) => setMaxEdad(parseInt(e.target.value))}
             min={19}
-            max={100}
+            max={9999}
             className={styles.EdadMinMax}
           />
         </label>
-
         <Button onClick={handleReset} size='sm' className={styles.btnReset}>Reset</Button>
       </div>
       <hr className={styles.hr} />
-      <div className={`${styles.cargHor} ${styles.checkBoxContainer}`}>
+      <div className={`${styles.cargHor}`}>
         <p>Fulltime:</p>
         <label>
           <input
@@ -148,7 +145,6 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
           />
           <span className={styles.checkBoxHover}> Si </span>
         </label>
-
         <label>
           <input
             type="checkbox"
@@ -160,7 +156,7 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
         </label>
       </div>
       <hr className={styles.hr} />
-      <div className={`${styles.mov} ${styles.checkBoxContainer}`}>
+      <div className={`${styles.mov} ${styles.cargHor} ${styles.checkBoxContainer}`}>
         <p>Movilidad:</p>
         <label>
           <input
@@ -171,7 +167,6 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
           />
           <span className={styles.checkBoxHover}> Si </span>
         </label>
-
         <label>
           <input
             type="checkbox"
@@ -183,6 +178,5 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
         </label>
       </div>
     </div>
-
   );
 };
