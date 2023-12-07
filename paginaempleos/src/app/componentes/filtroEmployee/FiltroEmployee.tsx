@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ListGroup, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import DataCandidatos from '../dataCanditatos/DataCandidatos';
 import styles from "./FiltroEmployee.module.css";
 
@@ -25,10 +25,10 @@ export const FiltroEmployee: React.FC<FiltroEmployeeProps> = ({ cambiosCandidato
     const candidatosFiltrados = DataCandidatos.filter((candidato: any) => {
       return (
         candidato.nombre.toLowerCase().startsWith(filtroNombre.toLowerCase()) ||
-        candidato.apellido.toLowerCase().startsWith(filtroNombre.toLowerCase())
+        candidato.apellido.toLowerCase().startsWith(filtroNombre.toLowerCase()) ||
+        (candidato.nombre + ' ' + candidato.apellido).toLowerCase().includes(filtroNombre.toLowerCase())
       );
     });
-
     cambiosCandidatosFiltrados(candidatosFiltrados);
   }, [filtroNombre]);
 

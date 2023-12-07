@@ -1,24 +1,28 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import { ListGroup } from "react-bootstrap";
-import Row from 'react-bootstrap/Row';
-import { useForm } from 'react-hook-form';
+import { Button, Form, Col, Row, ListGroup } from 'react-bootstrap';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import './FormCandidato.css'
 
+interface FormData {
+    validationName: string;
+    validationApellido: string;
+    validationEdad: number;
+    validationLinkedIn: string;
+    validationSkills: string;
+    validationProfesion: string;
+    validationTerminos: boolean;
+  }
 
-//
 function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandidato: any) => void }) {
-    const { handleSubmit, register, formState: { errors }, getValues } = useForm();
+    const { handleSubmit, register, formState: { errors }, getValues } = useForm<FormData>();
     const [file, setFile] = useState<any>();
-    const [fulltimeYes, setFulltimeYes] = useState<boolean>(false);
+    const [fulltimeYes, setFulltimeYes] = useState<boolean>(true);
     const [fulltimeNo, setFulltimeNo] = useState<boolean>(false);
-    const [movilidadYes, setMovilidadYes] = useState<boolean>(false);
+    const [movilidadYes, setMovilidadYes] = useState<boolean>(true);
     const [movilidadNo, setMovilidadNo] = useState<boolean>(false);
 
-    const onSubmit = (form: any) => {
+    const onSubmit: SubmitHandler<FormData> = () => {
 
         const formData = {
             id: "0",
@@ -47,11 +51,21 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
     const validateSkills = (value: string) => {
         const skillsArray = value.split(',').map(skill => skill.trim());
         const skillsCount = skillsArray.length;
-    
+
         if (skillsCount < 3 || skillsCount > 5) {
-          return 'Por favor ingresa entre 3 y 5 habilidades separadas por comas.';
+            return 'Por favor ingrese entre 3 y 5 habilidades separadas por comas.';
         }
-    
+
+        return true;
+    };
+
+    const validateEdad = (value: number) => {
+        if (value < 18) {
+          return 'Debe ser mayor de edad.';
+
+        } else if (value > 9999) {
+            return 'Debe tener menos que 10 milenios.'
+        }
         return true;
       };
 
@@ -95,85 +109,77 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                 <Form.Group as={Col} md="6">
                     <Form.Label>Nombres:</Form.Label>
                     <Form.Control
-                        required
                         type="text"
-                        defaultValue=""
                         className='inputForm'
                         {...register('validationName', {
                             required: 'Este campo es obligatorio.',
                             pattern: {
                                 value: /^([a-zA-Z]+\s?)+$/,
-                                message: 'Ingrese un nombre valido'
+                                message: 'Nombre debe contener solo con letras'
                             },
-                          })}
+                        })}
                     />
-                    <Form.Control.Feedback>Parece bien!</Form.Control.Feedback>
+                    <Form.Text className="text-danger">{errors.validationName?.message}</Form.Text>
                 </Form.Group>
                 <Form.Group as={Col} md="6">
                     <Form.Label>Apellido:</Form.Label>
                     <Form.Control
-                        required
                         type="text"
                         defaultValue=""
                         className='inputForm'
-                        {...register('validationApellido', 
-                        { required: 'Este campo es obligatorio.',
-                        pattern: {
-                            value: /^([a-zA-Z]+\s?)+$/,
-                            message: 'Ingrese un apellido valido.'
-                        }, 
-                    })}
+                        {...register('validationApellido',
+                            {
+                                required: 'Este campo es obligatorio.',
+                                pattern: {
+                                    value: /^([a-zA-Z]+\s?)+$/,
+                                    message: 'Apellido debe contener solo con letras.'
+                                },
+                            })}
                     />
-                    <Form.Control.Feedback>Parece bien!</Form.Control.Feedback>
+                    <Form.Text className="text-danger">{errors.validationApellido?.message}</Form.Text>
                 </Form.Group>
             </Row>
             <Row className="mb-3">
                 <Form.Group as={Col} md="8">
                     <Form.Label>LinkedIn:</Form.Label>
-                    <Form.Control 
-                        type="text" 
-                        placeholder="linkedin.com/SuPerfil" 
-                        required 
+                    <Form.Control
+                        type="text"
+                        placeholder="linkedin.com/SuPerfil"
                         className='inputForm'
                         {...register('validationLinkedIn', {
                             required: 'Este campo es obligatorio.',
                             pattern: {
-                              value: /^(www\.)?linkedin\.com\/[a-zA-Z]+$/,
-                              message: 'Ingrese un enlace de perfil de LinkedIn válido',
+                                value: /^(www\.)?linkedin\.com\/[a-zA-Z]+$/,
+                                message: 'Ej: linkedin.com/RammStein',
                             },
-                          })}
+                        })}
                     />
-                    <Form.Control.Feedback type="invalid">
-                        Debe ingresar su LinkedIn
-                    </Form.Control.Feedback>
+                    <Form.Text className="text-danger">{errors.validationLinkedIn?.message}</Form.Text>
                 </Form.Group>
                 <Form.Group as={Col} md="4">
                     <Form.Label>Edad:</Form.Label>
-                    <Form.Control 
-                        type="number" 
-                        required 
+                    <Form.Control
+                        type="number"
                         className='inputForm'
-                        {...register('validationEdad', { required: 'Este campo es obligatorio.' })}
+                        {...register('validationEdad',
+                         { required: 'Este campo es obligatorio.',
+                            validate: validateEdad 
+                        })}
                     />
-                    <Form.Control.Feedback type="invalid">
-                        Debe ser mayor de edad
-                    </Form.Control.Feedback>
+                    <Form.Text className="text-danger">{errors.validationEdad?.message}</Form.Text>
                 </Form.Group>
             </Row>
             <Row className="mb-3">
                 <Form.Group as={Col} md="8">
                     <Form.Label>Profesión:</Form.Label>
-                    <Form.Control 
-                        type="text"  
-                        required 
+                    <Form.Control
+                        type="text"
                         className='inputForm'
                         {...register('validationProfesion', {
                             required: 'Este campo es obligatorio.',
-                          })}
+                        })}
                     />
-                    <Form.Control.Feedback type="invalid">
-                        Debe ingresar una Profesión
-                    </Form.Control.Feedback>
+                    <Form.Text className="text-danger">{errors.validationProfesion?.message}</Form.Text>
                 </Form.Group>
             </Row>
             <Row className="mb-3">
@@ -230,7 +236,6 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                 <Form.Group as={Col} md="auto">
                     <Form.Label>Skills:</Form.Label>
                     <Form.Control
-                        required
                         type="text"
                         placeholder="min. 3, max. 5"
                         defaultValue=""
@@ -238,9 +243,9 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                         {...register('validationSkills', {
                             required: 'Este campo es obligatorio.',
                             validate: validateSkills
-                          })}
+                        })}
                     />
-                    <Form.Control.Feedback>Parece bien!</Form.Control.Feedback>
+                    <Form.Text className="text-danger">{errors.validationSkills?.message}</Form.Text>
                 </Form.Group>
             </Row>
             <Row>
@@ -251,16 +256,16 @@ function FormCandidato({ onSubmitCandidato }: { onSubmitCandidato: (nuevoCandida
                         accept=".jpg, .jpeg, .png"
                         onChange={handleOnChangeImg}
                     />
-                    <Form.Text className="text-danger"></Form.Text>
                 </Form.Group>
             </Row>
             <Form.Group className="mb-3">
                 <Form.Check
-                    required
                     label="Acepto los terminos y condiciones de Futurama"
-                    feedback="Debe aceptar antes de continuar"
-                    feedbackType="invalid"
+                    {...register('validationTerminos', {
+                        required: 'Debe aceptar los terminos y condiciones.',
+                    })}
                 />
+                <Form.Text className="text-danger">{errors.validationTerminos?.message}</Form.Text>
             </Form.Group>
             <Button type="submit" className='btnCargarOff'>Cargar Tarjeta</Button>
         </Form>
