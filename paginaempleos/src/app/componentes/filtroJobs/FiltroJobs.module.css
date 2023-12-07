@@ -1,0 +1,111 @@
+.filtroCont {
+  font-family: 'Ubuntu';
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid slategray;
+  background-color: #61d2b4;
+}
+
+.filtroCont p {
+  margin: 0px 0px 16px;
+}
+
+.rubro {
+  width: 100%;
+  padding: 8px 16px;
+}
+
+hr.hr {
+  margin: 0;
+}
+
+.cargHor {
+  width: 100%;
+  padding: 8px 16px;
+}
+
+
+
+.checkBoxHover {
+  margin: 0;
+}
+
+.checkBoxHover:hover {
+  cursor: pointer;
+}
+
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+}
+
+.inputForm {
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.inputForm:focus {
+  border-color: #0D7377;
+  outline: none;
+}
+
+.inputForm:focus-visible {
+  box-shadow: 0 0 5px rgba(13, 115, 119, 0.8);
+}
+
+@media(max-width: 1366px) {
+
+  .filtroCont {
+    flex-direction: row;
+    width: 75vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filtroCont p {
+    font-size: 1.5vw;
+    width: 40%;
+    margin: 0;
+  }
+
+  .etiqueta {
+    margin-right: 2vw;
+
+  }
+
+  .etiqueta span {
+    font-size: 1.6vw;
+  }
+
+  .rubro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .cargHor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+}
+
+@media(max-width: 768px) {
+  .inputBuscar {
+    height: 2.5vh;
+  }
+}

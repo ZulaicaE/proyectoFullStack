@@ -1,0 +1,15 @@
+.info {
+    font-family: 'Ubuntu';
+    font-size: 1.2vw;
+    font-weight: 500;
+    background-color: #61d2b4;
+    margin: 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid slategray;
+    width: 100%;
+}
+
+.bienvenida {
+    align-content: center;
+}

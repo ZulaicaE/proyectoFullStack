@@ -1,0 +1,106 @@
+.cardJobs {
+    background: #e0ffcd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0;
+    width: 15vw;
+    height: 90%;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+.cardJobs p{
+    font-size: .9vw;
+    margin-bottom: 2%;
+}
+.jobsImg {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+u {
+    font-size: .8vw;
+}
+
+span {
+    font-size: .7vw;
+}
+
+.tituloCardJobs {
+    font-size: 1vw;
+}
+
+
+.botonCV {
+    padding: 4%;
+    gap: 8px;
+}
+
+.botonCV button {
+    background: #61d2b4;
+    font-size: .8vw;
+}
+.botonCVnopadd {
+    padding: 0;
+    gap: 8px;
+}
+
+.botonCVnopadd button {
+    background: #61d2b4;
+    font-size: .8vw;
+}
+.col{
+    padding: 0;
+}
+@media(max-width: 1199px){
+    .cardJobs{
+        width: 20vw;
+    }
+    .tituloCardJobs{
+        font-size: 1.3vw;
+    }
+    .cardJobs p{
+        font-size: 1.2vw;
+    }
+    u{
+        font-size: 1vw;
+    }
+    span{
+        font-size: .9vw;
+    }
+    .botonCVnopadd{
+        padding: 0;
+    }
+}
+@media(max-width: 991px){
+    .cardJobs{
+        width: 30vw;
+    }
+    .tituloCardJobs{
+        font-size: 1.5vw;
+    }
+    .cardJobs p{
+        font-size: 1.2vw;
+    }
+    u{
+        font-size: 1vw;
+    }
+    span{
+        font-size: .9vw;
+    }
+    .botonCV button{
+        font-size: 1.5vw ;
+    }
+    .botonCVnopadd{
+        padding: 0;
+    }
+}
+@media(max-width: 768px){
+    .cardJobs{
+        width: 40vw;
+    }
+}

@@ -1,0 +1,22 @@
+.carousel{
+  width: 95vw;
+  padding: 1vh 2.5vw 1vh 2.5vw;
+}
+.imageCarousel {
+  margin: 1% 0%;
+  padding: 1%;
+  border: 5px solid;
+  border-color:#61d2b4 ;
+  overflow: inherit;
+  width: 99%;
+}
+
+.itemCarousel {
+  height: 15rem;
+}
+
+.itemCarousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

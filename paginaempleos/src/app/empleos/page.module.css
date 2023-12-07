@@ -1,0 +1,66 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #e0ffcd;
+  }
+
+ .contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2vh;
+  }
+   .divEmpleos {
+    width: 100%;
+    font-family: 'Ubuntu';
+    font-size: 21px;
+    font-weight: 500;
+    background-color: #61d2b4;
+    margin: 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid slategray;
+    justify-content: center;
+    align-items: center;
+}
+  .colIzq{
+    width: 250px;
+    margin-left: 5vw;
+    margin-right: 0;
+    margin-top: 10px;
+  
+  }
+  .colDer{
+    width: 75vw;
+    margin-right: 5vw;
+    
+  }
+  @media(max-width: 1366px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    .colIzq{
+      display: flex;
+      flex-direction: row ;
+      width: 75vw;
+      margin: 0;
+      padding: 0;
+    }
+    .colDer{
+      margin-left: 5vw;
+    }
+  
+  }
+  @media(max-width: 1199px){
+    .main{
+      min-height: auto;
+    }
+  }
